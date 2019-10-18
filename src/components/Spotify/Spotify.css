@@ -1,0 +1,8 @@
+.Playlist_Link {
+    color: #ff7143 !important;
+    display: inline;
+};
+
+.Playlist_Link:hover {
+    border-bottom: 10px solid #ff7143 !important;
+}
