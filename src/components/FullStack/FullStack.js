@@ -57,7 +57,7 @@ class FullStack extends Component {
     renderProjects() {
         let Projects = this.projects.map((el, idx) => {
             return(
-                <Col key={idx} style={{ marginBottom: "4%" }}>
+                <Col key={idx} md={6} sm={7} style={{ marginBottom: "4%" }} className="Portfolio-Col">
                 <MDBCard style={{ width: "22rem" }}>
                     <MDBCardImage className="img-fluid" src={el.cardImage} waves />
                     
@@ -141,7 +141,7 @@ class FullStack extends Component {
         return(
             <div id="FullStack" style={{ marginTop: "25px" }}>
             <Container>
-                <Row className="justify-content-md-center">
+                <Row className="justify-content-md-center justify-content-sm-center">
                 {this.renderProjects()}
                 </Row>
             </Container>

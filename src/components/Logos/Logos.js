@@ -37,7 +37,7 @@ class Logos extends Component {
     renderProjects() {
         let Projects = this.projects.map((el, idx) => {
             return(
-                <Col key={idx} md={4} style={{ marginBottom: "4%" }}>
+                <Col key={idx} lg={4} md={6} sm={7} style={{ marginBottom: "4%" }} className="Portfolio-Col">
                 <MDBCard style={{ width: "22rem" }}>
                     <MDBCardImage className="img-fluid" src={el.cardImage} waves onClick={this.toggle((idx + 1))} />
                     
@@ -82,7 +82,7 @@ class Logos extends Component {
         return(
             <div id="Logos">
             <Container>
-                <Row className="justify-content-md-center">
+                <Row className="justify-content-md-center justify-content-sm-center">
                 {this.renderProjects()}
                 </Row>
             </Container>

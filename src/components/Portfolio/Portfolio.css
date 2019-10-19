@@ -1,0 +1,12 @@
+.FeaturedDev, .FeaturedGraphic, .FeaturedVisual {
+    margin-bottom: 40px;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .Portfolio-ViewFull-Button {
+        position: relative;
+        left: 45px;
+    }
+}

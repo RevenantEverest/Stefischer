@@ -17,8 +17,8 @@ class Skills extends Component {
       render() {
         return (
           <Container>
-          <Row style={{ marginLeft: "0", marginRight: "0" }}>
-            <Col className="Skills-Col" md={4} sm={2}>
+          <Row style={{ width: "99%", margin: "0 auto" }} className="justify-content-md-center">
+            <Col className="Skills-Col" lg={4} md={8} sm={12}>
               <MDBCard className="Skills-Card text-center">    
                 <MDBCardBody className="Skills-Card-Body">
                 <MDBCardTitle className="Skills-Card-Title" tag="div">
@@ -49,7 +49,7 @@ class Skills extends Component {
               </MDBCard>
             </Col>
 
-            <Col className="Skills-Col" md={4} sm={2}>
+            <Col className="Skills-Col" lg={4} md={8} sm={12}>
               <MDBCard className="Skills-Card text-center">    
                 <MDBCardBody className="Skills-Card-Body">
                 <MDBCardTitle className="Skills-Card-Title" tag="div">
@@ -75,7 +75,7 @@ class Skills extends Component {
               </MDBCard>
             </Col>
 
-            <Col className="Skills-Col" md={4} sm={2}>
+            <Col className="Skills-Col" lg={4} md={8} sm={12}>
               <MDBCard className="Skills-Card text-center">    
                 <MDBCardBody className="Skills-Card-Body">
                 <MDBCardTitle className="Skills-Card-Title" tag="div">

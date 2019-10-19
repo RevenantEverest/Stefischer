@@ -21,9 +21,14 @@ class NavBar extends Component {
             isOpen: false,
             homeActive: false
         }
+        this.togglePostCollapse = this.togglePostCollapse.bind(this);
     }
 
     toggleCollapse = () => this.setState({ isOpen: !this.state.isOpen });
+    togglePostCollapse() {
+        if(this.state.isOpen)
+            this.setState({ isOpen: false })
+    }
 
     renderLogo() {
         if(this.props.location.pathname !== "/")
@@ -33,26 +38,26 @@ class NavBar extends Component {
 
     renderHome() {
         if(this.props.location.pathname !== "/")
-            return <MDBNavLink to="/" className="NavLink">Home</MDBNavLink>;
-        else return <MDBNavLink to="#" className="NavLink">Home</MDBNavLink>;
+            return <MDBNavLink to="/" className="NavLink" onClick={this.togglePostCollapse}>Home</MDBNavLink>;
+        else return <MDBNavLink to="#" className="NavLink" onClick={this.togglePostCollapse}>Home</MDBNavLink>;
     }
 
     renderAbout() {
         if(this.props.location.pathname !== "/")
-            return <MDBNavLink to="/about" className="NavLink">About</MDBNavLink>;
-        else return <ScrollLink activeClass="active" className="test6 NavLink" to="about" spy={true} smooth={true} duration={800}>About</ScrollLink>;
+            return <MDBNavLink to="/about" className="NavLink" onClick={this.togglePostCollapse}>About</MDBNavLink>;
+        else return <ScrollLink activeClass="active" className="test6 NavLink" to="about" spy={true} smooth={true} duration={800} onClick={this.togglePostCollapse}>About</ScrollLink>;
     }
 
     renderContact() {
         if(this.props.location.pathname !== "/")
-            return <MDBNavLink to="/contact" className="NavLink">Contact</MDBNavLink>;
-        else return <ScrollLink activeClass="active" className="test6 NavLink" to="contact" spy={true} smooth={true} duration={800}>Contact</ScrollLink>;
+            return <MDBNavLink to="/contact" className="NavLink" onClick={this.togglePostCollapse}>Contact</MDBNavLink>;
+        else return <ScrollLink activeClass="active" className="test6 NavLink" to="contact" spy={true} smooth={true} duration={800} onClick={this.togglePostCollapse}>Contact</ScrollLink>;
     }
 
     renderPortfolio() {
         if(this.props.location.pathname !== "/portfolio")
-            return <MDBNavLink to="/portfolio" className="NavLink">Portfolio</MDBNavLink>;
-        else return <MDBNavLink to="#" className="NavLink">Portfolio</MDBNavLink>;
+            return <MDBNavLink to="/portfolio" className="NavLink" onClick={this.togglePostCollapse}>Portfolio</MDBNavLink>;
+        else return <MDBNavLink to="#" className="NavLink" onClick={this.togglePostCollapse}>Portfolio</MDBNavLink>;
     }
 
     render() {

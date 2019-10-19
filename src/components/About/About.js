@@ -14,8 +14,8 @@ class About extends Component {
         return(
             <div id="About">
             <Container style={{ marginBottom: "5%" }}>
-                <Row className="justify-content-md-center">
-                <Col md={8} lg={8} style={{ marginBottom: "5%"}}>
+                <Row className="justify-content-md-center justify-content-sm-center">
+                <Col sm={8} md={8} lg={8} style={{ marginBottom: "5%"}}>
                     <Container style={{ textAlign: "center" }}>
                     <Row>
                         <Col>
@@ -32,12 +32,12 @@ class About extends Component {
                     </Container>
                 </Col>
                 </Row>
-                <Row className="justify-content-md-center" style={{ width: "99%", margin: "0 auto" }}>
+                <Row className="justify-content-md-center justify-content-sm-center" style={{ width: "99%", margin: "0 auto" }}>
                 <Col>
                     <Container>
-                    <Row className="justify-content-md-center">
-                        <Col>
-                        <MDBCard style={{ height: "auto", width: "22rem", margin: "0 auto" }}>
+                    <Row className="justify-content-md-center justify-content-sm-center justify-content-xs-center">
+                        <Col xs={12} style={{ paddingLeft: "0", paddingRight: "0" }} className="justify-content-xs-center">
+                        <MDBCard style={{ height: "auto", width: "20rem", margin: "0 auto" }}>
                             <MDBCardImage className="img-fluid" src="https://i.imgur.com/n41GdOj.jpg" waves />
                             <div className="avatar">
                                 <Image className="Avatar_Image" src="https://i.imgur.com/7uFL2RB.jpg" roundedCircle />

@@ -56,7 +56,7 @@ class Portfolio extends Component {
     renderDevProjects() {
         let Projects = this.development_projects.map((el, idx) => {
             return(
-                <Col key={idx} md={4} className="FeaturedDev">
+                <Col key={idx} md={4} sm={"auto"} className="FeaturedDev">
                 <MDBView hover>
                 <img
                     src={el.featuredImage}
@@ -147,7 +147,7 @@ class Portfolio extends Component {
         let Projects = this.graphicDesign_projects.map((el, idx) => {
             let _idx = (idx + this.development_projects.length) + 1;
             return(
-                <Col key={_idx} md={4} className="FeaturedGraphic">
+                <Col key={_idx} md={4} sm={10} className="FeaturedGraphic">
                     <MDBView hover>
                     <img
                         src={el.featuredImage}
@@ -197,7 +197,7 @@ class Portfolio extends Component {
         let Projects = this.motionGraphics_projects.map((el, idx) => {
             let _idx = (idx + this.development_projects.length + this.graphicDesign_projects.length) + 1;
             return(
-                <Col key={_idx} md={4}>
+                <Col key={_idx} md={4} sm={10} className="FeaturedVisual">
                     <MDBView hover>
                     <img
                         src={el.featuredImage}
@@ -256,16 +256,16 @@ class Portfolio extends Component {
                 </Row>
                 <Row style={{ marginBottom: "5%" }}>
                     <Container>
-                        <Row style={{ marginBottom: "3%" }}>
+                        <Row className="justify-content-sm-center">
                         {this.renderDevProjects()}
                         </Row>
-                        <Row style={{ marginBottom: "3%" }}>
+                        <Row className="justify-content-sm-center">
                         {this.renderGraphicDesignProjects()}
                         </Row>
-                        <Row style={{ marginBottom: "3%" }}>
+                        <Row className="justify-content-sm-center">
                         {this.renderMotionGraphicProjects()}
                         </Row>
-                        <Row>
+                        <Row className="Portfolio-ViewFull-Button">
                         <Col>
                             <Link to="/portfolio">
                                 <MDBBtn color={Skin.MDBColor} className="Button">

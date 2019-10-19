@@ -37,41 +37,32 @@ class MotionGraphics extends Component {
     findModal = (index) => this.state[("modal" + index)];
 
     renderProjects() {
-        console.log(this.projects)
         let Projects = this.projects.map((el, idx) => {
             return(
-                <Col key={idx} md={4} style={{ marginBottom: "4%" }}>
-
-                <Container>
-                <Row>
-                    <Col md={9}>
-
-                    <MDBCard style={{ width: "22rem" }}>
-                        <MDBView hover>
-                        <MDBCardImage
-                            src={el.thumbnail}
-                            className="img-fluid"
-                            alt=""
-                            waves
+                <Col key={idx} lg={4} md={6} sm={7} style={{ marginBottom: "4%" }} className="Portfolio-Col">
+                <MDBCard style={{ width: "22rem" }}>
+                    <MDBView hover>
+                    <MDBCardImage
+                        src={el.thumbnail}
+                        className="img-fluid"
+                        alt=""
+                        waves
+                    />
+                    <MDBMask className="flex-center" overlay="black-strong">
+                        <FontAwesomeIcon 
+                        style={{ fontSize: "100px" }} 
+                        className=" flex-center white-text" 
+                        icon="play-circle" 
+                        onClick={this.toggle((idx + 1))}
                         />
-                        <MDBMask className="flex-center" overlay="black-strong">
-                            <FontAwesomeIcon 
-                            style={{ fontSize: "100px" }} 
-                            className=" flex-center white-text" 
-                            icon="play-circle" 
-                            onClick={this.toggle((idx + 1))}
-                            />
-                        </MDBMask>
-                        </MDBView>
-                        <MDBCardBody style={{ background: "#1a1a1a" }}>
-                        <MDBCardTitle>{el.title}</MDBCardTitle>
-                        <MDBCardText>{el.text}</MDBCardText>
-                        <MDBBtn color={Skin.MDBColor} className="Button" onClick={this.toggle((idx + 1))}>Learn More</MDBBtn>
-                        </MDBCardBody>
-                    </MDBCard>
-                    </Col>
-                </Row>
-                </Container>
+                    </MDBMask>
+                    </MDBView>
+                    <MDBCardBody style={{ background: "#1a1a1a" }}>
+                    <MDBCardTitle>{el.title}</MDBCardTitle>
+                    <MDBCardText>{el.text}</MDBCardText>
+                    <MDBBtn color={Skin.MDBColor} className="Button" onClick={this.toggle((idx + 1))}>Learn More</MDBBtn>
+                    </MDBCardBody>
+                </MDBCard>
 
                 <MDBModal isOpen={this.findModal((idx + 1))} toggle={this.toggle((idx + 1))} centered>
                 <MDBModalHeader toggle={this.toggle((idx + 1))} className="Modal">{el.title}</MDBModalHeader>
@@ -109,7 +100,7 @@ class MotionGraphics extends Component {
         return(
             <div id="MotionGraphics">
             <Container>
-                <Row className="justify-content-md-center">
+                <Row className="justify-content-md-center justify-content-sm-center">
                 {this.renderProjects()}
                 </Row>
             </Container>

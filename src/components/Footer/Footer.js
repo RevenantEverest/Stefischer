@@ -9,7 +9,7 @@ class Footer extends Component {
     
     render() {
         return(
-            <div id="Footer" style={{ height: "10vh"}}>
+            <div id="Footer" style={{ height: "150px" }}>
             <Container>
                 <Row className="justify-contant-md-center" style={{ marginTop: "5%", height: "20vh" }}>
                     <Col>

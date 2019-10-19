@@ -9,8 +9,8 @@ class Spotify extends Component {
         return(
             <div id="Spotify">
             <Container>
-                <Row className="justify-content-md-center">
-                <Col sm={9} md={6} lg={6} style={{ marginBottom: "5%" }}>
+                <Row className="justify-content-md-center justify-content-sm-center">
+                <Col sm={9} md={7} lg={5} style={{ marginBottom: "5%" }}>
                     <iframe 
                     title="Spotify"
                     src="https://open.spotify.com/embed/playlist/3yeJRBe2oyyZkRBFVaiC6Q" 
@@ -21,7 +21,7 @@ class Spotify extends Component {
                     allow="encrypted-media"
                     />
                 </Col>
-                <Col sm={9} md={6} lg={6} style={{ marginBottom: "5%" }}>
+                <Col sm={9} md={7} lg={5} style={{ marginBottom: "5%" }}>
                     <Container>
                     <Row>
                         <Col>

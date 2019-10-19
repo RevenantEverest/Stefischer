@@ -70,8 +70,8 @@ class Contact extends Component {
         return(
             <div id="Contact" style={{ marginTop: "5%" }}>
             <Container>
-                <Row style={{ marginBottom: "5%" }}>
-                <Col md={7} lg={7} style={{ marginBottom: "5%" }}>
+                <Row style={{ marginBottom: "100px" }} className="justify-content-md-center">
+                <Col lg={7} md={8} style={{ marginBottom: "5%" }}>
                     <Container>
                     <Row>
                         <Col>
@@ -110,7 +110,7 @@ class Contact extends Component {
                     </Row>
                     </Container>
                 </Col>
-                <Col md={5} lg={5}>
+                <Col lg={5} md={8} >
                     <Container>
                     
                     <Row>
