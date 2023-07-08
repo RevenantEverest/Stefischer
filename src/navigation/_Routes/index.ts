@@ -1,0 +1,1 @@
+export { default as _HomeRoutes } from './_HomeRoutes';
