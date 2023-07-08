@@ -1,0 +1,31 @@
+{
+   "compilerOptions":{
+      "baseUrl":"./src",
+      "paths":{
+         "@@components/*":[
+            "./components/*"
+         ],
+         "@@containers/*":[
+            "./containers/*"
+         ],
+         "@@navigation/*":[
+            "./navigation/*"
+         ],
+         "@@pages/*":[
+            "./pages/*"
+         ],
+         "@@store/*":[
+            "./store/*"
+         ],
+         "@@types/*":[
+            "./types/*"
+         ],
+         "@@constants":[
+            "./constants/index.ts"
+         ],
+         "@@utils":[
+            "./utils/index.ts"
+         ]
+      }
+   }
+}
