@@ -7,8 +7,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "reset:npm": "rm -rf .yarn/ && yarn install",
-    "update:sdk": "yarn dlx @yarnpkg/sdks vscode"
+    "reset:npm": "rm -rf node_modules/ && bun install"
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",
