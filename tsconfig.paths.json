@@ -1,31 +1,18 @@
 {
-   "compilerOptions":{
-      "baseUrl":"./src",
-      "paths":{
-         "@@components/*":[
-            "./components/*"
-         ],
-         "@@containers/*":[
-            "./containers/*"
-         ],
-         "@@navigation/*":[
-            "./navigation/*"
-         ],
-         "@@pages/*":[
-            "./pages/*"
-         ],
-         "@@store/*":[
-            "./store/*"
-         ],
-         "@@types/*":[
-            "./types/*"
-         ],
-         "@@constants":[
-            "./constants/index.ts"
-         ],
-         "@@utils":[
-            "./utils/index.ts"
-         ]
-      }
-   }
+    "compilerOptions": {
+        /* Path Aliasing */
+        "baseUrl":"./src",
+        "paths": {
+            "@@assets/*": ["./assets/*"],
+            "@@components/*": ["./components/*"],
+            "@@containers/*": ["./containers/*"],
+            "@@navigation/*": ["./navigation/*"],
+            "@@pages/*": ["./pages/*"],
+            "@@store/*": ["./store/*"],
+            "@@types/*": ["./types/*"],
+            "@@theme": ["./theme/index.ts"],
+            "@@constants":["./constants/index.ts"],
+            "@@utils": ["./utils/index.ts"]
+        }
+    }
 }
