@@ -2,15 +2,13 @@ import React from 'react';
 import { Spinner } from 'flowbite-react';
 import { motion } from 'framer-motion';
 
-/* Redux */
-import { store } from '../../store';
 import { MotionProps } from 'framer-motion';
 
 export type ButtonSizes = "xs" | "sm" | "md" | "lg" | "xl";
 export type PropExtenders = React.ButtonHTMLAttributes<HTMLButtonElement> & MotionProps;
 
 export interface ButtonProps extends PropExtenders {
-    color?: "primary" | "secondary" | "accent" | "gradient",
+    color?: "primary" | "secondary" | "accent" | "gradient" | "white",
     size?: ButtonSizes,
     spinnerSize?: ButtonSizes,
     outlined?: boolean,
@@ -19,17 +17,16 @@ export interface ButtonProps extends PropExtenders {
 
 function Button({ color="primary", size="md", outlined, loading, children, className="", ...rest }: ButtonProps) {
 
-    const theme = store.getState().theme;
-
     const renderSpinner = () => (
         <Spinner size={size} />
     );
 
     const colorStyles = {
-        "primary": outlined ? theme.tailwind.outlinedButtonPrimary : theme.tailwind.buttonPrimary,
-        "secondary": outlined ? theme.tailwind.outlinedButtonSecondary : theme.tailwind.buttonSecondary,
-        "accent": outlined ? theme.tailwind.outlinedAccentButton : theme.tailwind.accentButton,
-        "gradient": outlined ? theme.tailwind.outlinedButtonGradient : theme.tailwind.buttonGradient
+        "primary": outlined ? "border-2 border-primary text-primary" : "bg-primary text-background",
+        "secondary": outlined ? "border-2 border-secondary" : "bg-secondary",
+        "accent": outlined ? "border-2 border-accent text-background" : "bg-accent text-background",
+        "gradient": `bg-gradient-to-tr from-primary to-secondary ${outlined ? "first:text-white" : "hover:shadow-lg hover:shadow-[#00f3c] text-background"}`,
+        "white": outlined ? "border-2 border-white" : "bg-white text-background"
     };
 
     const sizeStyles = {
@@ -52,7 +49,7 @@ function Button({ color="primary", size="md", outlined, loading, children, class
         w-full rounded border border-transparent 
         flex items-center justify-center z-10 
         font-medium
-        ${(color === "gradient" && outlined) && theme.tailwind.background}
+        ${(color === "gradient" && outlined) && "bg-background"}
     `;
 
     return(
