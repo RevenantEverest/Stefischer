@@ -1,8 +1,5 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Card as FlowbiteCard } from 'flowbite-react';
-
-/* Redux */
-import { store } from '../../store';
 
 export interface CardProps {
     horizontal?: boolean;
@@ -14,8 +11,6 @@ export interface CardProps {
 
 function Card({ className, horizontal, href, imgAlt, imgSrc, children }: PropsWithChildren<CardProps>) {
     
-    const theme = store.getState().theme;
-
     return(
         <FlowbiteCard 
             className={`${className}`}
@@ -25,7 +20,7 @@ function Card({ className, horizontal, href, imgAlt, imgSrc, children }: PropsWi
             imgSrc={imgSrc}
             theme={{ 
                 root: { 
-                    base: theme.tailwind.card + ` h-full rounded-lg` 
+                    base: `bg-card h-full rounded-lg`
                 } 
             }}
         >
