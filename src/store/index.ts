@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import thunk from 'redux-thunk';
 
 import { themeSlice } from './theme';
 
@@ -19,7 +18,13 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
     reducer: persistedReducer,
     devTools: process.env.NODE_ENV !== "production",
-    middleware: [thunk]
+    middleware: (getDefaultMiddleware) => (
+        getDefaultMiddleware({
+            thunk: {
+                extraArgument: []
+            }
+        })
+    )
 });
 
 export const persistor = persistStore(store);

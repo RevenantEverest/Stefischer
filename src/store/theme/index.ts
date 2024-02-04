@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import type { Theme } from '../../types/theme';
+import type { Theme } from '@@types/theme';
 
-import { dark } from '../../theme';
+import { dark } from '@@theme';
 
 const initialState: Theme = dark;
 
