@@ -1,8 +1,10 @@
-import { useLocation } from 'react-router-dom';
-
 import type { Theme } from '@@types/theme';
 
+import { useCallback, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import { NavBar } from './NavBar';
+import { theme as themeUtils } from '@@utils';
 
 export interface NavigationProps {
     theme: Theme,
@@ -13,13 +15,19 @@ function Navigation({ theme, container }: NavigationProps) {
 
     const location = useLocation();
 
+    const validateTheme = useCallback(() => {
+        themeUtils.applyTheme(theme);
+    }, [theme])
+    
+    useEffect(() => {
+        validateTheme();
+    }, [validateTheme, theme]);
+
     return(
         <div 
             className={`
-                ${theme.tailwind.background} 
-                ${theme.tailwind.text}
-                h-screen 
-                w-screen
+                text-text
+                bg-background
             `}
         >
             <NavBar location={location} theme={theme} />
