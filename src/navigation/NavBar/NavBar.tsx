@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Location } from 'react-router-dom';
 import { Navbar } from 'flowbite-react';
@@ -15,14 +15,15 @@ import { _HomeRoutes } from '../_Routes';
 import { MobileNav } from '@@navigation/MobileNav';
 
 import { IMAGE_RESOURCES } from '@@constants';
-import { navigation } from '../../utils';
+import { navigation } from '@@utils';
+import { Button } from '@@components/Common';
 
 interface NavBarProps {
     theme: Theme,
     location: Location
 };
 
-function NavBar({ theme, location }: NavBarProps) {
+function NavBar({ location }: NavBarProps) {
 
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -40,33 +41,46 @@ function NavBar({ theme, location }: NavBarProps) {
     };
 
     return(
-        <div className="w-full">
+        <div className="w-full absolute">
             <Navbar 
-                theme={{ 
-                    base: `
-                        ${theme.tailwind.background}
-                        fixed
-                        px-2 py-3 sm:px-4 rounded first:relative first:z-50
-                    ` 
+                theme={{
+                    root: {
+                        base: `
+                            bg-transparent
+                            absolute
+                            px-2 py-3 sm:px-4 rounded first:relative first:z-50
+                        `
+                    }
                 }} 
                 fluid 
                 rounded
             >
                 <Flex className="w-full self-center justify-center">
-                    <Flex className="w-full md:w-1/2" alignItems="center" alignContent="center">
+                    <Flex className="w-full md:w-4/5">
                         <Box flex="1 1 auto">
-                            <Link to="/" className="flex items-center">
-                                <img
-                                    src={IMAGE_RESOURCES.LOGO}
-                                    className="h-14"
-                                    alt="Afflurish Logo"
-                                />
+                            <Flex>
+                                <Box>
+                                    <Link to="/" className="flex items-center">
+                                        <img
+                                            src={IMAGE_RESOURCES.LOGO}
+                                            className="h-14 mr-4 rounded-full"
+                                            alt="Stefischer Logo"
+                                        />
+                                    </Link>
+                                </Box>
+                                <Box className="hidden md:flex items-center">
+                                    {renderRoutes()}
+                                </Box>
+                            </Flex>
+                        </Box>
+                        <Box flex="1 1 auto" className="hidden md:flex md:justify-end md:items-center">
+                            <Link to="/contact">
+                                <Button outlined color="white" size="md">
+                                    <span className="font-semibold text-white">Get In Touch</span>
+                                </Button>
                             </Link>
                         </Box>
-                        <Box flex="1 1 auto" className="hidden md:flex md:justify-center md:items-center">
-                            {renderRoutes()}
-                        </Box>
-                        <Box flex="1 1 auto" className="flex items-center justify-end">
+                        <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">
                             <div className="ml-4 mr-2 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
                                 <FontAwesomeIcon className="text-2xl" icon={faBars} />
                             </div>
