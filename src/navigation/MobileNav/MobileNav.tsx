@@ -13,7 +13,7 @@ export interface MobileNavProps {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 };
 
-function MobileNav({ location, routes, isOpen, setIsOpen, children }: PropsWithChildren<MobileNavProps>) {
+function MobileNav({ location, routes, isOpen, setIsOpen }: PropsWithChildren<MobileNavProps>) {
 
     const { initial, animate, exit, transition } = {
         initial: { y: "-100vh" },
