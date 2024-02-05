@@ -1,10 +1,4 @@
-import type { Theme } from '@@types/theme';
-
-export interface ContactPageProps {
-    theme: Theme
-};
-
-function ContactPage(props: ContactPageProps) {
+function ContactPage() {
     return(
         <div>
             <h1>About Page</h1>
