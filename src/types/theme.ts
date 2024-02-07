@@ -5,7 +5,7 @@ export interface ThemeColors {
     background: string,
 
     text: string,
-    mutedText: string,
+    muted: string,
     accentText: string,
 
     card: string,
@@ -18,7 +18,7 @@ export type MappedThemeKeys = (
     "--color-accent" |
 
     "--color-text" |
-    "--color-text-muted" |
+    "--color-muted" |
     "--color-text-accent" |
 
     "--color-card" |

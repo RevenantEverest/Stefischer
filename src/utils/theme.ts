@@ -22,7 +22,7 @@ export function mapTheme(colors: ThemeColors): MappedTheme {
         "--color-accent": colors.accent,
         
         "--color-text": colors.text,
-        "--color-text-muted": colors.mutedText,
+        "--color-muted": colors.muted,
         "--color-text-accent": colors.accentText,
         
         "--color-card": colors.card,

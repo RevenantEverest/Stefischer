@@ -13,7 +13,7 @@ const tailwindConfig: Config = {
                 secondary: 'var(--color-secondary)',
                 accent: 'var(--color-accent)',
                 text: 'var(--color-text)',
-                'text-muted': 'var(--color-text-muted)',
+                'muted': 'var(--color-muted)',
                 'text-accent': 'var(--color-text-accent)',
                 'card': 'var(--color-card)',
                 'card-light': 'var(--color-card-light)',
