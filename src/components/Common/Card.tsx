@@ -20,7 +20,7 @@ function Card({ className, horizontal, href, imgAlt, imgSrc, children }: PropsWi
             imgSrc={imgSrc}
             theme={{ 
                 root: { 
-                    base: `bg-card h-full rounded-lg`
+                    base: `bg-card h-full rounded-2xl`
                 } 
             }}
         >
