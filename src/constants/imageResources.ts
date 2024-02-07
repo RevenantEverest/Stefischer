@@ -5,4 +5,4 @@
 */
 
 export const LOGO = "https://i.imgur.com/yv6nz4O.png";
-export const PORTRAIT = "https://imgur.com/f2pAiNp";
+export const PORTRAIT = "https://i.imgur.com/f2pAiNp.png";
