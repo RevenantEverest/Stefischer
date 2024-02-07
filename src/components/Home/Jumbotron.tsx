@@ -8,8 +8,8 @@ import developerTechnology from '@@assets/lottie/developer-technology.json';
 
 function Jumbotron() {
     return(
-        <Flex className={`w-full h-5/6 py-20 md:px-40 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
-            <Flex className="h-[66vh] lg:h-[70vh]">
+        <Flex className={`w-full h-5/6 py-20 px-4 md:px-40 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
+            <Flex className="h-[70vh] md:h-[66vh] lg:h-[70vh]">
                 <Box flex="1.5 1 1" className="flex items-center text-center md:text-left">
                     <motion.div
                         initial={{ x: "-200vw" }}

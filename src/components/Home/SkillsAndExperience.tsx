@@ -18,7 +18,10 @@ import {
     SiJest,
     SiAdobephotoshop,
     SiAdobeaftereffects,
-    SiJavascript
+    SiJavascript,
+    SiSwc,
+    SiTailwindcss,
+    SiBootstrap
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -36,10 +39,13 @@ function SkillsAndExperience() {
         { icon: SiJavascript, title: "JavaScript" },
         { icon: SiNodedotjs, title: "Node.js" },
         { icon: SiBun, title: "Bun" },
+        { icon: SiSwc, title: "SWC" },
         { icon: SiTypescript, title: "Typescript" },
         { icon: SiReact, title: "React" },
         { icon: SiRedux, title: "Redux" },
         { icon: SiJest, title: "Jest" },
+        { icon: SiTailwindcss, title: "TailwindCSS" },
+        { icon: SiBootstrap, title: "Bootstrap" },
         { icon: BiLogoPostgresql, title: "PostgreSQL" },
         { icon: SiExpo, title: "Expo" },
         { icon: SiPython, title: "Python" },
@@ -78,13 +84,18 @@ function SkillsAndExperience() {
         <Flex className="justify-center text-center flex-col">
             <Box className="flex flex-col justify-center items-center pb-20">
                 <p className="uppercase text-muted mb-2 text-lg">The right tool for the job</p>
-                <h1 className="text-6xl font-semibold text-center text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text ">Skills & Experience</h1>
-                <p className="w-4/6 mt-6 font-semibold">
-                    A good developer knows the right tool for the job. 
+                <h1 className="text-6xl font-semibold text-center text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text">Skills & Experience</h1>
+                <p className="w-4/6 mt-6 font-semibold text-md">A good developer knows the right tool for the job.</p>
+                <p className="w-4/6 mt-2 font-semibold text-md">
+                    Explore my expertise in various programming 
+                    languages and technologies, ranging from Python and JavaScript to frameworks like React and Django. 
+                    Whether it's front-end development, back-end architecture, or database management, I possess a 
+                    versatile skill set to tackle diverse project requirements effectively. Check out my proficiency 
+                    in a curated list of programming languages and technologies below.
                 </p>
             </Box>
             <Box className="flex justify-center py-4">
-                <Flex className="flex-wrap w-4/6 gap-8 justify-center">
+                <Flex className="flex-wrap w-5/6 gap-8 justify-center">
                 {renderSkills()}
                 </Flex>
             </Box>
