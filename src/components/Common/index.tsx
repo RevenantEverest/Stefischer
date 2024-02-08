@@ -13,9 +13,13 @@ export { default as TiltDivider } from './Dividers/TiltDivider';
 
 /* Inputs */
 export { default as TextInput } from './Inputs/TextInput';
+export { default as TextArea } from './Inputs/TextArea';
 
 /* Alerts */
 export { default as SuccessAlert } from './Alerts/SuccessAlert';
 
 /* Social Icon */
 export { default as SocialIcon } from './SocialIcon';
+
+/* Other */
+export { default as BeamMeUp } from './BeamMeUp';
