@@ -1,12 +1,20 @@
+import type { HomePageScrollElements } from '@@types/ScrollElements';
+
 import Lottie from 'lottie-react';
 import { Flex, Box } from 'reflexbox';
 import { motion } from 'framer-motion';
+import { Link as ScrollLink } from 'react-scroll';
 
 import { Button } from '@@components/Common';
 
 import developerTechnology from '@@assets/lottie/developer-technology.json';
 
-function Jumbotron() {
+export interface JumbotronProps {
+    scrollElements: HomePageScrollElements
+};
+
+function Jumbotron({ scrollElements }: JumbotronProps) {
+
     return(
         <Flex className={`w-full h-5/6 py-20 px-4 md:px-40 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
             <Flex className="h-[70vh] md:h-[66vh] lg:h-[70vh]">
@@ -29,9 +37,15 @@ function Jumbotron() {
                                 <Button color="white" size="lg">
                                     Portfolio
                                 </Button>
-                                <Button outlined color="white" size="lg">
-                                    Get In Touch
-                                </Button>
+                                <ScrollLink 
+                                    to={scrollElements.contact}
+                                    spy={true}
+                                    smooth={true}
+                                >
+                                    <Button outlined color="white" size="lg">
+                                        Get In Touch
+                                    </Button>
+                                </ScrollLink>
                             </div>
                         </Flex>
                     </motion.div>
