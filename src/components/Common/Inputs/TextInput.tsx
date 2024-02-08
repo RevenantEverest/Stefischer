@@ -1,6 +1,7 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
     type: "text" | "email" | "password" | "number" | "url" | "tel",
@@ -16,18 +17,19 @@ function TextInput({ id="", className="", type, label, icon, iconRight, iconClas
         block w-full border 
         disabled:cursor-not-allowed 
         disabled:opacity-50 
-        bg-neutral-800 
-        ${errorMessage ? "border-red-500" : "border-neutral-600"} 
-        text-white 
+        bg-card-light 
+        ${errorMessage ? "border-red-500" : "border-card-light"} 
+        text-text 
         rounded-lg 
         p-2.5
         text-sm
+        placeholder:text
         ${(icon && !iconRight) && "pl-10"} 
     `;
 
     const focusInputClassName = `
-        focus:border-blue-500 
-        focus:ring-blue-500 
+        focus:border-secondary 
+        focus:ring-secondary
     `;
 
     const renderIcon = (faIcon: IconProp) => {
@@ -51,7 +53,7 @@ function TextInput({ id="", className="", type, label, icon, iconRight, iconClas
 
     const renderLabel = () => (
         <div>
-            <p className="text-xs font-semibold">{label}</p>
+            <p className="text-sm font-semibold">{label}</p>
         </div>
     );
 
