@@ -1,25 +1,21 @@
+import type { Location } from 'react-router-dom';
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { Location } from 'react-router-dom';
 import { Navbar } from 'flowbite-react';
 import { Flex, Box } from 'reflexbox';
 import { AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-/* Redux */
-import type { Theme } from '@@types/theme';
-
-import { _HomeRoutes } from '../_Routes';
-
+import { _HomeRoutes } from '@@navigation/_Routes';
 import { MobileNav } from '@@navigation/MobileNav';
+import GetInTouch from './GetInTouch';
 
 import { IMAGE_RESOURCES } from '@@constants';
 import { navigation } from '@@utils';
-import { Button } from '@@components/Common';
 
 interface NavBarProps {
-    theme: Theme,
     location: Location
 };
 
@@ -74,11 +70,7 @@ function NavBar({ location }: NavBarProps) {
                             </Flex>
                         </Box>
                         <Box flex="1 1 auto" className="hidden md:flex md:justify-end md:items-center">
-                            <Link to="/contact">
-                                <Button outlined color="white" size="md">
-                                    <span className="font-semibold text-white">Get In Touch</span>
-                                </Button>
-                            </Link>
+                            <GetInTouch location={location} />
                         </Box>
                         <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">
                             <div className="ml-4 mr-2 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
