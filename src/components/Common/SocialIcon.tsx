@@ -44,7 +44,7 @@ function SocialIcon({ brand, size, gradient, containerClassName, iconClassName }
     const backgroundClassName = gradient ? "bg-gradient-to-bl from-primary to-secondary text-text" : "bg-secondary text-card"
 
     return(
-        <Link to={brandLinks[brand]}>
+        <Link to={brandLinks[brand]} target="_blank" rel="noopener noreferrer">
             <motion.div
                 whileHover={{
                     y: "-.5vh"
