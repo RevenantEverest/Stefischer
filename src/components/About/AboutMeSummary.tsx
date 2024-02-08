@@ -1,7 +1,8 @@
 import { Flex, Box } from 'reflexbox';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import { Button, Card, SocialIcon } from '@@components/Common';
 
@@ -33,11 +34,17 @@ function AboutMeSummary() {
                         applications. Beyond coding, you'll find me exploring virtual worlds in video games, crafting music, 
                         or geeking out over building computers - all part of the creative blend I bring to web development.
                     </p>
-                    <Flex className="pb-6 justify-center md:justify-start">
+                    <Flex className="pb-6 justify-center md:justify-start gap-5">
                         <Button color="secondary">
                             <p className="font-bold">Let's Get Coffee</p>
                             <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                         </Button>
+                        <Link to="/about">
+                            <Button outlined color="secondary">
+                                <p className="font-bold">Read Full Story</p>
+                                <FontAwesomeIcon className="ml-2 mt-1" icon={faArrowRight} />
+                            </Button>
+                        </Link>
                     </Flex>
                     <Flex className="gap-4 h-16 lg:h-0 justify-center md:justify-start">
                         <SocialIcon gradient brand="GitHub" size="md" />
