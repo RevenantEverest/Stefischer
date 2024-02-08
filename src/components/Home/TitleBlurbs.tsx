@@ -34,22 +34,25 @@ function TitleBlurbs() {
 
     const renderBlurbs = () => {
         return blurbs.map((blurb, index) => (
-            <motion.div
+            <motion.div 
+                key={`title-blurb-${index}`}
                 className="w-3/6"
                 whileHover={{
                     y: "-2.5vh"
                 }}
             >
-                <Card 
-                    key={`title-blurb-${index}`} 
-                    className="h-64 text-center flex items-center justify-center"
+                <motion.div
+                    initial={{ opacity: 0, y: "15vh" }}
+                    whileInView={{ opacity: 1, y: 0, transition: { delay: index * 0.5 } }}
                 >
-                    <div className="flex flex-col justify-center">
-                        <blurb.icon className="text-secondary text-6xl w-full mb-5" />
-                        <h1 className="text-3xl font-bold mb-4">{blurb.title}</h1>
-                        <p className="font-semibold">{blurb.blurb}</p>
-                    </div>
-                </Card>
+                    <Card className="h-64 text-center flex items-center justify-center">
+                        <div className="flex flex-col justify-center">
+                            <blurb.icon className="text-secondary text-6xl w-full mb-5" />
+                            <h1 className="text-3xl font-bold mb-4">{blurb.title}</h1>
+                            <p className="font-semibold">{blurb.blurb}</p>
+                        </div>
+                    </Card>
+                </motion.div>
             </motion.div>
         ));
     };
