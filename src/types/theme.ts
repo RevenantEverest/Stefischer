@@ -1,31 +1,35 @@
 export interface ThemeColors {
-    
-};
-
-export interface ThemeTailwindClasses {
-    text: string,
-    mutedText: string,
-    accentText: string,
-    gradientText: string,
-
+    primary: string,
+    secondary: string,
+    accent: string,
     background: string,
-    accentBackground: string,
-    backgroundGradient: string,
+
+    text: string,
+    muted: string,
+    accentText: string,
 
     card: string,
-
-    buttonPrimary: string,
-    buttonSecondary: string,
-    accentButton: string,
-    buttonGradient: string,
-
-    outlinedButtonPrimary: string,
-    outlinedButtonSecondary: string,
-    outlinedAccentButton: string,
-    outlinedButtonGradient: string,
+    cardLight: string
 };
 
+export type MappedThemeKeys = (
+    "--color-primary" |
+    "--color-secondary" |
+    "--color-accent" |
+
+    "--color-text" |
+    "--color-muted" |
+    "--color-text-accent" |
+
+    "--color-card" |
+    "--color-card-light" |
+
+    "--background"
+); 
+
+export type MappedTheme = Record<MappedThemeKeys, string>;
+
 export interface Theme {
-    colors: ThemeColors,
-    tailwind: ThemeTailwindClasses
+    name: string,
+    colors: ThemeColors
 };
