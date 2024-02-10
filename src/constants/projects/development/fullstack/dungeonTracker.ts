@@ -6,9 +6,9 @@ const DungeonTracker: DeveloperProject = {
     description: `
         Dungeon Tracker aims to simplify and organize any D&D campaign. Like most projects, 
         it was created out of necessity. One of my campaigns was struggling to 
-        organize our campaign information, at first we were using Discord text channels but 
-        that wasn't user friendly when it came to searching for specific information. While 
-        not currently deployed, my campaign uses the development version for QA testing and 
+        organize our campaign information.
+        
+        While not currently deployed, my campaign uses the development version for QA testing and 
         it has increased our time spent playing and decreased our time shuffling through computer 
         file trees/ text channels. So far it supports Sign Up/ Login, Campaign Creation, 
         Member Invites, Basic Role System, Inventory Management, Group Finances, and Personalized Notes.
