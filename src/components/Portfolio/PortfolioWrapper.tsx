@@ -24,6 +24,7 @@ function PortfolioWrapper({ projects }: PortfolioWrapperProps) {
         return PROJECT_CATEGORIES.CATEGORIES.map((category, index) => (
             <ProjectCategoryBadge 
                 key={`category-${index}`} 
+                projects={projects}
                 category={category}
                 active={categoryFilter === category}
                 setCategoryFilter={setCategoryFilter}

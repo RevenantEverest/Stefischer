@@ -1,15 +1,17 @@
-import type { ProjectCategory } from '@@types/Portfolio';
+import type { AllProjects, ProjectCategory } from '@@types/Portfolio';
 
 import { motion } from 'framer-motion';
 
 export interface ProjectCategoryBadgeProps {
+    projects: AllProjects[],
     category: ProjectCategory,
     setCategoryFilter: (value: ProjectCategory) => void,
     active?: boolean
 };
 
-function ProjectCategoryBadge({ category, active, setCategoryFilter }: ProjectCategoryBadgeProps) {
+function ProjectCategoryBadge({ projects, category, active, setCategoryFilter }: ProjectCategoryBadgeProps) {
 
+    const projectAmount: number = projects.filter((project) => project.category === category).length;
     const activeStyles = `
         bg-gradient-to-tr from-primary to-secondary
     `;
@@ -23,11 +25,12 @@ function ProjectCategoryBadge({ category, active, setCategoryFilter }: ProjectCa
         >
             <div
                 className={`
-                    bg-secondary px-5 py-1 rounded-full
+                    flex bg-secondary px-5 py-1 rounded-full
                     ${active && activeStyles}
                 `}
             >
                 <p className="font-semibold">{category}</p>
+                <p className="font-bold ml-2">{projectAmount}</p>
             </div>
         </motion.div>
     );
