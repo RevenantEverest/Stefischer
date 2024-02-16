@@ -10,8 +10,10 @@
             "@@pages/*": ["./pages/*"],
             "@@store/*": ["./store/*"],
             "@@types/*": ["./types/*"],
+            
             "@@theme": ["./theme/index.ts"],
             "@@constants":["./constants/index.ts"],
+            "@@hooks": ["./hooks/index.ts"],
             "@@utils": ["./utils/index.ts"]
         }
     }
