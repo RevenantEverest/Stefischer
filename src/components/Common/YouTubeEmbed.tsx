@@ -11,7 +11,6 @@ function YouTubeEmbed({ title, source }: YouTubeEmbedProps) {
                 title={title}
                 className="w-full h-full"
                 src={source} 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen 
             />
         </div>
