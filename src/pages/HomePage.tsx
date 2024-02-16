@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 import { Flex } from 'reflexbox';
 import { Element, scrollSpy } from 'react-scroll';
+import { Helmet } from 'react-helmet';
 
 import { Layout, TiltDivider, WaveDivider, BeamMeUp } from '@@components/Common';
 
@@ -22,6 +23,9 @@ function HomePage() {
 
     return(
         <React.Fragment>
+            <Helmet>
+                <title>Stefan Fischer</title>
+            </Helmet>
             <Flex className="fixed">
                 <Jumbotron scrollElements={SCROLL_ELEMENTS.HOMEPAGE} />
             </Flex>
