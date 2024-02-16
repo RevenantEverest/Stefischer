@@ -37,7 +37,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                             <div className="flex gap-5 text-lg mt-14 w-full md:w-3/4 justify-center md:justify-start">
                                 <Link to="/portfolio">
                                     <Button color="white" size="lg">
-                                        Portfolio
+                                        <p className="font-semibold">Portfolio</p>
                                     </Button>
                                 </Link>
                                 <ScrollLink 
@@ -46,7 +46,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                                     smooth={true}
                                 >
                                     <Button outlined color="white" size="lg">
-                                        Get In Touch
+                                        <p className="font-semibold">Get In Touch</p>
                                     </Button>
                                 </ScrollLink>
                             </div>
