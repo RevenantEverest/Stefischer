@@ -24,7 +24,7 @@ import {
     SiBootstrap
 } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
-import { TbBrandReactNative } from 'react-icons/tb';
+import { TbBrandReactNative, TbBrandFramerMotion } from 'react-icons/tb';
 
 interface Skill {
     icon: IconType,
@@ -47,6 +47,7 @@ function SkillsAndExperience() {
         { icon: SiRedux, title: "Redux" },
         { icon: SiJest, title: "Jest" },
         { icon: SiTailwindcss, title: "TailwindCSS" },
+        { icon: TbBrandFramerMotion, title: "Framer Motion" },
         { icon: SiBootstrap, title: "Bootstrap" },
         { icon: BiLogoPostgresql, title: "PostgreSQL" },
         { icon: SiExpo, title: "Expo" },
