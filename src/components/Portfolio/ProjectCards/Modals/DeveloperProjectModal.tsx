@@ -47,7 +47,6 @@ function DeveloperProjectModal({ project, visible, setVisible }: DeveloperProjec
                     (project.images.length > 0) &&
                     <Box>
                         <div className="h-[50vh] min-w-[50vw] flex items-center justify-center">
-                            
                             <Carousel className="h-5/6 w-5/6">
                                 {renderImages()}
                             </Carousel>
@@ -56,19 +55,19 @@ function DeveloperProjectModal({ project, visible, setVisible }: DeveloperProjec
                     
                 }
                 <Box className="w-full">
-                    <h1 className="text-4xl font-bold text-text text-center">{project.title}</h1>                        
+                    <h1 className="text-3xl font-bold text-text text-center mb-5">{project.title}</h1>                        
                 </Box>
-                <Box className="w-5/6 pb-10">
-                    <h2 className="font-bold text-xl mb-4 text-muted">Description:</h2>
-                    <p className="font-semibold text-md">{project.description}</p>
+                <Box className="w-full pb-10">
+                    <h2 className="font-bold text-lg mb-4 text-muted">Description:</h2>
+                    <p className="font-semibold text-sm">{project.description}</p>
                 </Box>
-                <Box className="w-5/6 pb-8">
-                    <h2 className="font-bold text-xl mb-4 text-muted">Technologies Used:</h2>
-                    <div className="flex gap-2">
+                <Box className="w-full pb-8">
+                    <h2 className="font-bold text-lg mb-4 text-muted">Technologies Used:</h2>
+                    <div className="flex gap-2 flex-wrap">
                         {renderTechnologies()}
                     </div>
                 </Box>
-                <Box className="flex justify-center gap-2 w-5/6">
+                <Box className="flex justify-center gap-2 w-full">
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Button color="secondary" size="sm" className="px-6">
                             <FaGithub className="mr-2 text-lg" />
