@@ -9,7 +9,7 @@ function ProjectTechnology({ technology }: ProjectTechnologiesProps) {
 
     return(
         <motion.div
-            className="hover:cursor-default"
+            className="hover:cursor-default mb-3"
             initial={{ y: 0 }}
             whileHover={{ y: "-0.8vh" }}
         >
