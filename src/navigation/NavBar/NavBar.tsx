@@ -71,7 +71,7 @@ function NavBar({ location }: NavBarProps) {
                 {
                     solidBackground &&
                     <motion.div 
-                        className="fixed w-[140vw] py-11 bg-background z-40 top-0 left-0"
+                        className="fixed w-[140vw] top-0 left-0"
                         initial={{ skew: -50, x: "120vw" }}
                         animate={{ 
                             skew: 0, 
@@ -83,7 +83,9 @@ function NavBar({ location }: NavBarProps) {
                             x: "120vw",
                             transition: { duration: .3 }
                         }}
-                    />
+                    >
+                        <div className="h-full w-full bg-background absolute py-11 z-40" />
+                    </motion.div>
                 }
                 </AnimatePresence>
                 <Flex className="w-full self-center justify-center z-50">
