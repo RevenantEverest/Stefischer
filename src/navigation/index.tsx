@@ -23,6 +23,11 @@ function Navigation({ theme, container }: NavigationProps) {
         validateTheme();
     }, [validateTheme, theme]);
 
+    /* Scroll to top of page when location changes */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return(
         <div 
             className={`
@@ -30,7 +35,7 @@ function Navigation({ theme, container }: NavigationProps) {
                 bg-background
             `}
         >
-            <NavBar location={location} theme={theme} />
+            <NavBar location={location} />
             {container}
         </div>
     );

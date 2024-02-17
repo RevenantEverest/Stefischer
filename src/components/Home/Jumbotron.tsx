@@ -3,6 +3,7 @@ import type { HomePageScrollElements } from '@@types/ScrollElements';
 import Lottie from 'lottie-react';
 import { Flex, Box } from 'reflexbox';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
 import { Button } from '@@components/Common';
@@ -34,16 +35,18 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                                 </p>
                             </div>
                             <div className="flex gap-5 text-lg mt-14 w-full md:w-3/4 justify-center md:justify-start">
-                                <Button color="white" size="lg">
-                                    Portfolio
-                                </Button>
+                                <Link to="/portfolio">
+                                    <Button color="white" size="lg">
+                                        <p className="font-semibold">Portfolio</p>
+                                    </Button>
+                                </Link>
                                 <ScrollLink 
                                     to={scrollElements.contact}
                                     spy={true}
                                     smooth={true}
                                 >
                                     <Button outlined color="white" size="lg">
-                                        Get In Touch
+                                        <p className="font-semibold">Get In Touch</p>
                                     </Button>
                                 </ScrollLink>
                             </div>

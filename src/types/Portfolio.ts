@@ -27,3 +27,5 @@ export interface MotionGraphicsProject extends Project {
     videoUrl: string,
     twitchChannel: string
 };
+
+export type AllProjects = Project | DeveloperProject | MotionGraphicsProject;

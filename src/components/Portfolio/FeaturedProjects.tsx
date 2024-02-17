@@ -1,11 +1,15 @@
 import type { Project, DeveloperProject, MotionGraphicsProject } from '@@types/Portfolio';
 
 import { Flex, Box } from 'reflexbox';
+import { Link } from 'react-router-dom';
+import { Button } from '@@components/Common';
 import FeaturedPortfolioCard from './FeaturedPortfolioCard';
 
 import { LOGO_PROJECTS, MOTION_GRAPHICS_PROJECTS, FULL_STACK_PROJECTS } from '@@constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-function PortfolioSummary() {
+function FeaturedProjects() {
 
     const featuredProjects: Array<Project | DeveloperProject | MotionGraphicsProject> = [
         FULL_STACK_PROJECTS.FiresideBOT,
@@ -30,11 +34,17 @@ function PortfolioSummary() {
     return(
         <Flex className="flex-col w-full items-center">
             <Box className="flex flex-col justify-center items-center pb-20 w-full">
-                <h1 className="text-6xl font-semibold text-center">Recent Projects</h1>
+                <h1 className="text-6xl font-semibold text-center">Featured Projects</h1>
                 <p className="w-3/6 mt-6 font-semibold text-center">
-                    Explore my recent projects, merging full-stack development, graphic design, and visual effects into 
+                    Explore my featured projects, merging full-stack development, graphic design, and visual effects into 
                     a dynamic portfolio that reflects my diverse skill set.
                 </p>
+                <Link to="/portfolio">
+                    <Button color="secondary" className="mt-8">
+                        <p className="font-bold mr-2">Check out full portfolio</p>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                    </Button>
+                </Link>
             </Box>
             <Flex className="flex-wrap gap-8 justify-center">
                 {renderProjects()}
@@ -43,4 +53,4 @@ function PortfolioSummary() {
     );
 };
 
-export default PortfolioSummary;
+export default FeaturedProjects;
