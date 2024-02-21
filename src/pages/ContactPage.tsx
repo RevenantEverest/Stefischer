@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex, Box } from 'reflexbox';
 import { Helmet } from 'react-helmet';
 
-import { WaveDivider, Layout } from '@@components/Common';
+import { WaveDivider, Layout, BeamMeUp } from '@@components/Common';
 import ContactSection from '@@components/Contact/ContactSection';
 
 function ContactPage() {
@@ -25,6 +25,9 @@ function ContactPage() {
                 <Layout>
                     <div className="my-32">
                         <ContactSection />
+                    </div>
+                    <div>
+                        <BeamMeUp />
                     </div>
                 </Layout>
             </Flex>
