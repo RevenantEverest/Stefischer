@@ -59,7 +59,7 @@ function ContactForm({ onSubmit }: ContactFormProps) {
                 <div className="my-3">
                     <TextInput
                         id="email"
-                        type="email"
+                        type="text"
                         icon={faEnvelope}
                         placeholder="example@example.com"
                         label="Email"
@@ -67,7 +67,6 @@ function ContactForm({ onSubmit }: ContactFormProps) {
                         onBlur={handleBlur}
                         value={values.email}
                         errorMessage={errors.email}
-                        required={true}
                     />
                 </div>
                 <div className="my-3">
@@ -81,7 +80,6 @@ function ContactForm({ onSubmit }: ContactFormProps) {
                         onBlur={handleBlur}
                         value={values.phoneNumber}
                         errorMessage={errors.phoneNumber}
-                        required={true}
                     />
                 </div>
                 <div className="my-3">
@@ -91,13 +89,20 @@ function ContactForm({ onSubmit }: ContactFormProps) {
                         label="Message"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.phoneNumber}
-                        errorMessage={errors.phoneNumber}
+                        value={values.message}
+                        errorMessage={errors.message}
                         required={true}
                     />
                 </div>
                 <div className="mt-10 mb-5">
-                    <Button className="w-full" color="secondary" disabled={isSubmitting} onClick={() => handleSubmit}>
+                    <Button 
+                        className="w-full" 
+                        color="secondary" 
+                        type="submit"
+                        disabled={isSubmitting} 
+                        loading={isSubmitting} 
+                        onClick={() => handleSubmit}
+                    >
                         <p className="font-semibold">Submit</p>
                         <FontAwesomeIcon className="ml-2" icon={faPaperPlane} />
                     </Button>
