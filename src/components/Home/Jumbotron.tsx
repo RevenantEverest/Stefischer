@@ -33,7 +33,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                         animate={{ x: 0 }}
                         transition={{ duration: 1, delay: .5, type: "spring" }}
                     >
-                        <Flex className="flex-col items-center justify-center">
+                        <Flex className="flex-col items-center justify-center lg:items-start">
                             <h1 className="text-[5rem] leading-[1] md:text-6xl lg:text-8xl font-bold uppercase text-white/20">Stefan Fischer</h1>
                             <h2 className="text-4xl leading-[1] md:text-3xl lg:text-4xl font-bold -mt-8 md:ml-8">Full Stack Developer</h2>
                             <br />
