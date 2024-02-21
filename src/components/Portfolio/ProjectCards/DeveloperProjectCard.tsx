@@ -44,7 +44,7 @@ function DeveloperProjectCard({ project }: DeveloperProjectCardProps) {
                 onClick={() => setVisible(true)}
             >
                 <Card className="w-full">
-                    <Flex className="gap-5 flex-col md:flex-row items-center">
+                    <Flex className="gap-5 flex-col lg:flex-row items-center">
                         <Box className="flex items-center">
                             {
                                 project.thumbnailUrl ? 
@@ -52,19 +52,19 @@ function DeveloperProjectCard({ project }: DeveloperProjectCardProps) {
                                 renderPlaceholderImage()
                             }
                         </Box>
-                        <Box className="w-full md:w-4/6 flex flex-col">
-                            <div className="flex">
-                                <h1 className="text-4xl font-bold mb-5 text-text text-center md:text-left mr-4">
+                        <Box className="w-full lg:w-4/6 flex flex-col">
+                            <div className="flex items-center justify-center lg:justify-start">
+                                <h1 className="text-4xl font-bold mb-5 text-text mr-4">
                                     {project.title}
                                 </h1>
                                 <ProjectMediaBadge media={project.images} />
                             </div>
-                            <p className="font-semibold">{project.description}</p>
+                            <p className="font-semibold text-center lg:text-left">{project.description}</p>
                             <Flex className="flex-col h-full justify-end pb-2">
-                                <Flex className="gap-3 pt-5 flex-wrap justify-center md:justify-start">
+                                <Flex className="gap-3 pt-5 flex-wrap justify-center lg:justify-start">
                                     {renderTechnologies()}
                                 </Flex>
-                                <Flex className="pt-6 gap-3 flex-wrap justify-center md:justify-start">
+                                <Flex className="pt-6 gap-3 flex-wrap justify-center lg:justify-start">
                                     <Button color="secondary" size="sm" className="px-6">
                                         <FaGithub className="mr-2 text-lg" />
                                         <p className="font-bold">Github Repo</p>

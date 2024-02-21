@@ -34,19 +34,19 @@ function AboutMeSummary() {
                         applications. Beyond coding, you'll find me exploring virtual worlds in video games, crafting music, 
                         or geeking out over building computers - all part of the creative blend I bring to web development.
                     </p>
-                    <Flex className="pb-6 justify-center md:justify-start gap-5">
+                    <Flex className="pb-6 justify-center lg:justify-start flex-col md:flex-row gap-5">
                         <Button color="secondary">
                             <p className="font-bold">Let's Get Coffee</p>
                             <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                         </Button>
                         <Link to="/about">
-                            <Button outlined color="secondary">
+                            <Button outlined color="secondary" className="w-full">
                                 <p className="font-bold">Read Full Story</p>
                                 <FontAwesomeIcon className="ml-2 mt-1" icon={faArrowRight} />
                             </Button>
                         </Link>
                     </Flex>
-                    <Flex className="gap-4 h-16 lg:h-0 justify-center md:justify-start">
+                    <Flex className="gap-4 h-16 lg:h-0 justify-center lg:justify-start">
                         <SocialIcon gradient brand="GitHub" size="md" />
                         <SocialIcon gradient brand="LinkedIn" size="md" />
                         <SocialIcon gradient brand="Facebook" size="md" />
@@ -64,13 +64,13 @@ function AboutMeSummary() {
                             repeat: Infinity
                         }}
                     >
-                        <div className="h-72 w-72 bg-gradient-to-bl from-primary to-secondary rounded-full relative -top-8 -right-8" />
+                        <div className="h-64 w-64 md:h-72 md:w-72 bg-gradient-to-bl from-primary to-secondary rounded-full relative -top-8 -right-8" />
                     </motion.div>
                     <motion.div 
-                        className="z-10"
+                        className="z-10 h-72 w-72"
                     >
                         <img 
-                            className="rounded-full h-72 z-10 border-card border-4 bg-card" 
+                            className="rounded-full z-10 border-card border-4 bg-card" 
                             src={IMAGE_RESOURCES.PORTRAIT} 
                             alt="head shot"
                         />

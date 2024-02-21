@@ -2,6 +2,7 @@ import type { Theme } from '@@types/theme';
 
 import { useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import { NavBar } from './NavBar';
 import { theme as themeUtils } from '@@utils';
@@ -34,7 +35,18 @@ function Navigation({ theme, container }: NavigationProps) {
                 text-text
                 bg-background
             `}
-        >
+        >   
+            <Toaster
+                position="bottom-center"
+                toastOptions={{
+                    style: {
+                        border: "none",
+                        background: "transparent",
+                        boxShadow: "none",
+                        maxWidth: "33%"
+                    }
+                }}
+            />
             <NavBar location={location} />
             {container}
         </div>
