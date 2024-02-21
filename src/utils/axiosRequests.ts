@@ -1,9 +1,9 @@
 import type { AxiosResponse } from 'axios';
-import type { HandleAxiosReturn } from '@@types/promises.js';
+import type { HandleAxiosReturn } from '@@types/promises';
 
 import axios from 'axios';
 
-import * as promises from './promises.js';
+import * as promises from './promises';
 
 type RequestMethods = "get" | "post" | "put" | "patch" | "delete";
 
