@@ -11,9 +11,11 @@
             "@@store/*": ["./store/*"],
             "@@types/*": ["./types/*"],
             
-            "@@theme": ["./theme/index.ts"],
+            /* Index specific aliases */
             "@@constants":["./constants/index.ts"],
             "@@hooks": ["./hooks/index.tsx"],
+            "@@services": ["./services/index.ts"],
+            "@@theme": ["./theme/index.ts"],
             "@@utils": ["./utils/index.ts"]
         }
     }
