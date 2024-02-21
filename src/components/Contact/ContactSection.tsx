@@ -5,8 +5,6 @@ import { Flex, Box } from 'reflexbox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-hot-toast';
-import validator from 'validator';
-
 
 import { Card, SocialIcon, ToastError, ToastSuccess } from '@@components/Common';
 import ContactForm from '@@components/Forms/ContactForm';
@@ -18,22 +16,6 @@ import { PERSONAL_LINKS } from '@@constants';
 function ContactSection() {
 
     const onSubmit = async (values: ContactFormValues, helpers: ContactFormHelpers) => {
-        let hasFieldErrors = false;
-
-        if(!validator.isEmail(values.email)) {
-            hasFieldErrors = true;
-            helpers.setFieldError("email", "Not a valid Email");
-        }
-
-        if(!validator.isMobilePhone(values.phoneNumber)) {
-            hasFieldErrors = true;
-            helpers.setFieldError("phoneNumber", "Not a valid Phone Number");
-        }
-
-        if(hasFieldErrors) {
-            return helpers.setSubmitting(false);
-        }
-
         const [res, err] = await services.formCarry.send({
             name: values.name,
             email: values.email,
