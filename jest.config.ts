@@ -4,8 +4,7 @@ const jestConfig: Config = {
     preset: "ts-jest",
     testEnvironment: "jest-environment-jsdom",
     testMatch: [
-        "**/__tests__/**/*.test.tsx",
-        "**/__tests__/**/*.spec.tsx"
+        "**/__tests__/**/?(*.)+(spec|test).ts?(x)" 
     ],
     transform: {
         "^.+\\.tsx?$": "ts-jest"
