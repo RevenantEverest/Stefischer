@@ -18,9 +18,9 @@ const jestConfig: Config = {
         "^@@pages/(.*)$": "<rootDir>/src/pages/$1",
         "^@@store/(.*)$": "<rootDir>/src/store/$1",
         "^@@types/(.*)$": "<rootDir>/src/types/$1",
-        "^@@theme/(.*)$": "<rootDir>/src/theme/$1",
         "^@@tests/support/(.*)$": "<rootDir>/src/__tests__/support/$1",
 
+        "^@@theme": "<rootDir>/src/theme/index.ts",
         "^@@constants": "<rootDir>/src/constants/index.ts",
         "^@@hooks": "<rootDir>/src/hooks/index.tsx",
         "^@@utils": "<rootDir>/src/utils/index.ts",
