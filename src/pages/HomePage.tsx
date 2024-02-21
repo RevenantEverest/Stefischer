@@ -29,10 +29,10 @@ function HomePage() {
             <Flex className="fixed">
                 <Jumbotron scrollElements={SCROLL_ELEMENTS.HOMEPAGE} />
             </Flex>
-            <Flex className="absolute left-0 right-0 top-[66.2vh] md:top-[66.2vh] lg:top-[66.2vh] justify-center bg-red-500">
+            <Flex className="absolute left-0 right-0 top-[66.2vh] md:top-[74.2vh] lg:top-[66.2vh] justify-center">
                 <WaveDivider />
             </Flex> 
-            <Flex className="relative bg-background w-full justify-center top-[86vh] pt-20">
+            <Flex className="relative bg-background w-full justify-center top-[86vh] md:top-[94vh] lg:top-[86vh] pt-20">
                 <Layout>
                     <Element name={SCROLL_ELEMENTS.HOMEPAGE.about}>
                         <div className="my-32">
