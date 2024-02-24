@@ -9,11 +9,11 @@ export interface CardProps {
     className?: string
 };
 
-function Card({ className, horizontal, href, imgAlt, imgSrc, children }: PropsWithChildren<CardProps>) {
+function Card({ className="", horizontal, href, imgAlt, imgSrc, children }: PropsWithChildren<CardProps>) {
     
     return(
         <FlowbiteCard 
-            className={`${className}`}
+            className={className}
             horizontal={horizontal}
             href={href}
             imgAlt={imgAlt}

@@ -14,9 +14,12 @@ export default defineConfig({
             '@@pages': path.resolve(__dirname, './src/pages'),
             '@@store': path.resolve(__dirname, './src/store'),
             '@@types': path.resolve(__dirname, './src/types'),
-            '@@theme': path.resolve(__dirname, './src/theme'),
+
+            /* Index specific aliases */
             '@@constants': path.resolve(__dirname, './src/constants'),
             '@@hooks': path.resolve(__dirname, './src/hooks'),
+            '@@theme': path.resolve(__dirname, './src/theme'),
+            '@@services': path.resolve(__dirname, './src/services'),
             '@@utils': path.resolve(__dirname, './src/utils'),
         }
     },

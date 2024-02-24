@@ -13,6 +13,9 @@ import {
     DeveloperProjectCard
 } from './ProjectCards';
 
+import { useWindowDimensions } from '@@hooks';
+import { BREAKPOINTS } from '@@constants';
+
 export interface PortfolioSingleProject {
     project: AllProjects,
     index: number
@@ -32,6 +35,7 @@ function calculateDelayIndex(project: AllProjects, index: number) {
 function PortfolioSingleProject({ project, index }: PortfolioSingleProject) {
 
     const delayIndex = calculateDelayIndex(project, index);
+    const dimensions = useWindowDimensions();
 
     const renderProjectCard = () => {
         switch(project.category) {
@@ -48,11 +52,26 @@ function PortfolioSingleProject({ project, index }: PortfolioSingleProject) {
         }
     };
 
+    const calculateWidth = () => {
+        if(dimensions.width < BREAKPOINTS.LG) {
+            return "w-full";
+        }
+
+        if(project.category === "Logos") {
+            return "w-3/12";
+        }
+
+        if(project.category === "Motion Graphics") {
+            return "w-5/12";
+        }
+
+        return "w-full";
+    };
+
     return(
         <motion.div
             className={`
-                ${(project.category === "Logos") && "w-3/12"}
-                ${(project.category === "Motion Graphics") && "w-5/12"}
+                ${calculateWidth()}
             `}
             initial={{ 
                 x: "-20vw", 

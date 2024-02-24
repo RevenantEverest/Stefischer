@@ -1,4 +1,6 @@
+export * as axiosRequests from './axiosRequests';
 export * as navigation from './navigation';
+export * as promises from './promises';
 export * as regex from './regex';
 export * as theme from './theme';
 export * as youtube from './youtube';

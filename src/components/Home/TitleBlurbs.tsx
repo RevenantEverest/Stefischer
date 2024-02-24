@@ -36,7 +36,7 @@ function TitleBlurbs() {
         return blurbs.map((blurb, index) => (
             <motion.div 
                 key={`title-blurb-${index}`}
-                className="w-3/6"
+                className="w-full lg:w-3/6"
                 whileHover={{
                     y: "-2.5vh"
                 }}
@@ -58,7 +58,7 @@ function TitleBlurbs() {
     };
 
     return(
-        <Flex className="gap-8">
+        <Flex className="gap-8 flex-col lg:flex-row">
             {renderBlurbs()}
         </Flex>
     );

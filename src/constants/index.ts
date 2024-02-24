@@ -1,3 +1,4 @@
+export * as BREAKPOINTS from './breakpoints';
 export * as IMAGE_RESOURCES from './imageResources';
 export * as PERSONAL_LINKS from './personalLinks';
 export * as SCROLL_ELEMENTS from './scrollElements';
