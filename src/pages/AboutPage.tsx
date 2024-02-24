@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import { WaveDivider, Layout, BeamMeUp } from '@@components/Common';
 import AboutMeSummary from '@@components/About/AboutMeSummary';
+import DeveloperTimeline from '@@components/About/DeveloperTimeline';
 
 function AboutPage() {
     return(
@@ -25,6 +26,9 @@ function AboutPage() {
                 <Layout>
                     <div className="pb-32">
                         <AboutMeSummary />
+                    </div>
+                    <div>
+                        <DeveloperTimeline />
                     </div>
                     <div className="pt-32">
                         <BeamMeUp />
