@@ -13,6 +13,7 @@ export const themeSlice = createSlice({
     reducers: {
         setTheme: (state, action: PayloadAction<Theme>) => {
             state = action.payload;
+            return state;
         }
     }
 });
