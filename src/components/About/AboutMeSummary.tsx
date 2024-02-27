@@ -1,14 +1,21 @@
 import { Flex, Box } from 'reflexbox';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import { Button, Card, SocialIcon } from '@@components/Common';
 
-import { IMAGE_RESOURCES } from '@@constants';
+import { IMAGE_RESOURCES, SCROLL_ELEMENTS } from '@@constants';
 
 function AboutMeSummary() {
+
+    const scrollLinkProps = {
+        to: SCROLL_ELEMENTS.HOMEPAGE.contact,
+        spy: true,
+        smooth: true
+    };
 
     return(
         <Card className="overflow-hidden">
@@ -18,7 +25,7 @@ function AboutMeSummary() {
                     <div className="border-b-2 border-secondary w-14 ml-3 md:ml-0" />
                 </div>
             </Flex>
-            <Flex className="px-6 flex-col lg:flex-row">
+            <Flex className="px-0 md:px-6 flex-col lg:flex-row">
                 <Box className="w-full lg:w-5/6 text-center lg:text-left pb-16">
                     <h1 className="font-bold text-4xl">Stefan Fischer</h1>
                     <h2 className="font-semibold text-secondary text-xl mb-6">Full Stack Developer ~ Graphic Designer ~ VFX Artist</h2>
@@ -34,11 +41,13 @@ function AboutMeSummary() {
                         applications. Beyond coding, you'll find me exploring virtual worlds in video games, crafting music, 
                         or geeking out over building computers - all part of the creative blend I bring to web development.
                     </p>
-                    <Flex className="pb-6 justify-center lg:justify-start flex-col md:flex-row gap-5">
-                        <Button color="secondary">
-                            <p className="font-bold">Let's Get Coffee</p>
-                            <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
-                        </Button>
+                    <Flex className="pb-6 justify-center lg:justify-start flex-col items-center md:flex-row gap-5">
+                        <ScrollLink {...scrollLinkProps}>
+                            <Button color="secondary">
+                                <p className="font-bold">Let's Get Coffee</p>
+                                <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
+                            </Button>
+                        </ScrollLink>
                         <Link to="/about">
                             <Button outlined color="secondary" className="w-full">
                                 <p className="font-bold">Read Full Story</p>
