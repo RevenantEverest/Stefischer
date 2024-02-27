@@ -48,7 +48,7 @@ function HomePage() {
                 </Layout>
             </Flex>
             <Flex className="relative bg-background w-full justify-center top-[86vh] pt-20 z-10">
-                <Flex className="absolute w-full justify-center top-[24vh]">
+                <Flex className="absolute w-full justify-center top-[28vh] md:top-[24vh]">
                     <TiltDivider />
                 </Flex>
             </Flex>
@@ -59,7 +59,7 @@ function HomePage() {
                     </div>
                 </Layout>
             </Flex>
-            <Flex className="relative w-full justify-center top-[60vh] pt-20 z-10">
+            <Flex className="relative w-full justify-center top-[62vh] md:top-[60vh] pt-20 z-10">
                 <Flex className="absolute w-full justify-center top-[24vh]">
                     <TiltDivider rotate />
                 </Flex>
