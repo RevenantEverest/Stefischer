@@ -6,7 +6,7 @@ const Archiver: DeveloperProject = {
     description: `
         A Discord bot that migrates entire text channel history to another text channel (even in another Discord server).
     `,
-    thumbnailUrl: "",
+    thumbnailUrl: "https://i.imgur.com/XBxPcIU.png",
     github: "https://github.com/RevenantEverest/Archiver",
     deployed: false,
     images: [],
