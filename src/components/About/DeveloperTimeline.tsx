@@ -5,6 +5,14 @@ import { HiCalendar } from 'react-icons/hi';
 import { Timeline } from '@@components/Common';
 
 import ViewProjectButton from './ViewProjectButton';
+import DeveloperProjectModal from '../Portfolio/ProjectCards/Modals/DeveloperProjectModal';
+
+import { FULL_STACK_PROJECTS, FRONTEND_PROJECTS, BACKEND_PROJECTS } from '@@constants';
+
+interface ModalComponentProps {
+    visible: boolean,
+    setVisible: (value: boolean) => void
+};
 
 function DeveloperTimeline() {
 
@@ -21,7 +29,16 @@ function DeveloperTimeline() {
                 Coming out of the WDI course, I wanted to start building out my portfolio. My first project was 
                 FiresideBOT, a Discord bot. This project helped hone the skills I learned during the WDI course.
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={FULL_STACK_PROJECTS.FiresideBOT}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "May 2018",
@@ -29,8 +46,7 @@ function DeveloperTimeline() {
             description: `
                 Began Software Engineer in Training (SET) course at General Assembly. This course was sponsored by 
                 Fortune 500 company Cognizant. Here I learned about Java, Spring Boot, Docker and microservice architecture.
-            `,
-            extraContent: () => <ViewProjectButton />
+            `
         },
         {
             date: "June 2018",
@@ -39,7 +55,16 @@ function DeveloperTimeline() {
                 A 2D browser based RPG, where you can fight, accept/complete quests, and buy/sell at shops. This 
                 was made as a final project for the SET course.
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={FULL_STACK_PROJECTS.Acirhia}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "November 2018",
@@ -55,7 +80,16 @@ function DeveloperTimeline() {
             description: `
                 A full stack project with the aim of making D&D campaigns easier to track for both players and DM.
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={FULL_STACK_PROJECTS.DungeonTracker}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "April 2020",
@@ -65,13 +99,31 @@ function DeveloperTimeline() {
                 This was created when my friend groups Discord server was being moved to another server, but we wanted to keep all the channels pins 
                 and messages available to view. 
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={BACKEND_PROJECTS.Archiver}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "October 2020",
             title: "Created Phasmophobia Ghost Tool",
             description: "A website that displays information for the game Phasmophobia. I used this project to learn Redux, and more complex state management.",
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={FRONTEND_PROJECTS.PhasmophobiaGhostTool}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "May 2021",
@@ -79,7 +131,16 @@ function DeveloperTimeline() {
             description: `
                 A web client that tracks time spent on projects. Created to help create invoices while freelancing.
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={FULL_STACK_PROJECTS.WorkTimeManager}
+                        />
+                    )}
+                />
+            )
         },
         {
             date: "August 2021",
@@ -103,7 +164,16 @@ function DeveloperTimeline() {
                 After needing event information for GW2 and not being able to find a good API, I created this web 
                 scraper to scrape the information from the GW2 Wiki.
             `,
-            extraContent: () => <ViewProjectButton />
+            extraContent: () => (
+                <ViewProjectButton
+                    modalComponent={(props: ModalComponentProps) => (
+                        <DeveloperProjectModal 
+                            {...props} 
+                            project={BACKEND_PROJECTS.GW2EventCrawler}
+                        />
+                    )}
+                />
+            )
         },
     ];
 
