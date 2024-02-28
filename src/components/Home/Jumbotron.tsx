@@ -25,7 +25,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
 
     return(
         <Flex className={`w-full h-5/6 py-20 px-0 md:px-10 lg:px-40 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
-            <Flex className="h-[70vh] md:h-[66vh] lg:h-[70vh]">
+            <Flex className="h-[70vh] md:h-[66vh] lg:h-[70vh] w-[100vw]">
                 <Box flex="1.5 1 1" className="flex items-center text-center md:text-left">
                     <motion.div
                         className="w-full"
@@ -33,11 +33,11 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                         animate={{ x: 0 }}
                         transition={{ duration: 1, delay: .5, type: "spring" }}
                     >
-                        <Flex className="flex-col items-center justify-center lg:items-start">
-                            <h1 className="text-[5rem] leading-[1] md:text-6xl lg:text-8xl font-bold uppercase text-white/20">Stefan Fischer</h1>
+                        <Flex className="flex-col items-center justify-center lg:items-start w-[99vw] md:w-full">
+                            <h1 className="text-[5rem] leading-[1] md:text-6xl lg:text-8xl font-bold uppercase text-white/30">Stefan Fischer</h1>
                             <h2 className="text-4xl leading-[1] md:text-3xl lg:text-4xl font-bold -mt-8 md:ml-8">Full Stack Developer</h2>
                             <br />
-                            <div className="text-lg mt-4 lg:mt-8 w-full text-left md:text-center lg:text-left md:w-3/4">
+                            <div className="text-lg mt-4 lg:mt-8 w-full text-center md:text-center lg:text-left md:w-3/4">
                                 <p>
                                     I'm a digerati with a background in design, utilizing the modern web stack to bring new and innovative designs to the web.
                                 </p>

@@ -25,7 +25,7 @@ function MotionGraphicsProjectCard({ project }: MotionGraphicsProjectCardProps) 
             <Card>
                 <Flex className="gap-5 flex-col items-center text-center">
                     <Box className="flex overflow-hidden">
-                        <div className="h-60 w-[22rem] lg:w-[35rem]">   
+                        <div className="h-52 md:h-60 w-[18rem] md:w-[22rem] lg:w-[35rem]">   
                             <img className="w-full h-full object-cover rounded-3xl" src={project.thumbnailUrl} alt={project.title} />
                         </div>
                     </Box>

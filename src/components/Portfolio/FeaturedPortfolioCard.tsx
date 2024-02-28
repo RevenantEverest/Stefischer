@@ -43,7 +43,7 @@ function FeaturedPortfolioCard({ project }: FeaturedPortfolioCardProps) {
     return(
         <React.Fragment>
             <motion.div 
-                className="flex h-64 w-96 overflow-hidden" 
+                className="flex h-60 w-80 md:h-64 md:w-96 overflow-hidden" 
                 whileHover={{
                     y: "-.5vh"
                 }}

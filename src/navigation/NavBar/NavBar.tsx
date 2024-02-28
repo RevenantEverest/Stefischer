@@ -38,6 +38,10 @@ function NavBar({ location }: NavBarProps) {
         }
     }, [scrollPosition]);
 
+    useEffect(() => {
+        setSolidBackground(isMobileOpen);
+    }, [isMobileOpen]);
+
     const renderRoutes = () => {
         const Routes = _HomeRoutes.filter((route) => route.displayNav).map((route, index) => {
             const isActive = navigation.isActiveRoute(location.pathname, route);
@@ -110,7 +114,7 @@ function NavBar({ location }: NavBarProps) {
                             <GetInTouch location={location} />
                         </Box>
                         <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">
-                            <div className="ml-4 mr-2 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
+                            <div className="ml-4 mr-4 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
                                 <FontAwesomeIcon className="text-2xl" icon={faBars} />
                             </div>
                         </Box>

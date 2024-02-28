@@ -46,8 +46,8 @@ function DeveloperProjectModal({ project, visible, setVisible }: DeveloperProjec
                 {
                     (project.images.length > 0) &&
                     <Box>
-                        <div className="h-[50vh] min-w-[50vw] flex items-center justify-center">
-                            <Carousel className="h-5/6 w-5/6">
+                        <div className="h-[50vh] min-w-[100vw] md:min-w-[50vw] flex items-center justify-center">
+                            <Carousel className="h-5/6 w-5/6" slide={false}>
                                 {renderImages()}
                             </Carousel>
                         </div>
