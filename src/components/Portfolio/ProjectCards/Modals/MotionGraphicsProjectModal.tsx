@@ -16,8 +16,8 @@ function MotionGraphicsProjectModal({ project, visible, setVisible }: MotionGrap
     return(
         <Modal motionKey={`${project.title}-modal`} visible={visible} setVisible={setVisible}>
             <Flex className="flex-col items-center">
-                <Box>
-                    <div className="h-[50vh] min-w-[50vw] flex items-center justify-center">
+                <Box className="pb-10">
+                    <div className="md:h-[50vh] md:min-w-[50vw] flex items-center justify-center">
                         <div className="h-5/6 w-5/6">
                             <YouTubeEmbed title={`${project.title}-video-`} source={project.videoUrl} />
                         </div>
