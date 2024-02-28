@@ -6,7 +6,7 @@ const WorkTimeManager: DeveloperProject = {
     description: `
         A web client that tracks time spent on projects. Created to help create invoices while freelancing.
     `,
-    thumbnailUrl: "",
+    thumbnailUrl: "https://i.imgur.com/HO4ldT3.png",
     github: "https://github.com/RevenantEverest/WorkTimeManager",
     deployed: false,
     images: [

@@ -1,18 +1,21 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Button } from '@@components/Common';
+import React from 'react';
 
 export interface ViewProjectButtonProps {
-    to?: string
+    modalComponent: React.FC<{ visible: boolean, setVisible: (value: boolean) => void }>
 };
 
-function ViewProjectButton({ to }: ViewProjectButtonProps) {
+function ViewProjectButton({ modalComponent }: ViewProjectButtonProps) {
+
+    const [visible, setVisible] = useState(false);
+
     return(
         <div className="w-full md:w-1/2">
-            <Link to={to ?? "/portfolio"}>
-                <Button color="secondary">
-                    <p className="font-semibold">View Project</p>
-                </Button>
-            </Link>
+            <Button color="secondary" onClick={() => setVisible(true)}>
+                <p className="font-semibold">View Project</p>
+            </Button>
+            {modalComponent({ visible, setVisible })}
         </div>
     );
 };
