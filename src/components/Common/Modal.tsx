@@ -36,7 +36,7 @@ function Modal({ motionKey, visible, setVisible, children }: React.PropsWithChil
                         onClick={() => setVisible(false)}
                     >
                         <Box onClick={(e: React.MouseEvent<HTMLElement>) => e.stopPropagation()}>
-                            <Card className="rounded-2xl w-[60rem]">
+                            <Card className="rounded-2xl max-h-[96vh] w-[98vw] md:w-[60rem] overflow-y-scroll">
                                 <div className="relative top-0 right-0">
                                     <div className="absolute top-0 right-0">
                                         <Flex className="items-end justify-end">
