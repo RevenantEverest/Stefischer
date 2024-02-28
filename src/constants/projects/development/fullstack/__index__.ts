@@ -1,6 +1,7 @@
 import type { DeveloperProject } from '@@types/Portfolio';
 
 import Acirhia from './acirhia';
+import Afflurish from './afflurish';
 import DungeonTracker from './dungeonTracker';
 import FiresideBOT from './firesidebot';
 import WorkTimeManager from './workTimeManager';
@@ -10,11 +11,12 @@ import WorkTimeManager from './workTimeManager';
 */
 const FullStackProjects: DeveloperProject[] = [
     FiresideBOT,
+    Afflurish,
     DungeonTracker,
     WorkTimeManager,
     Acirhia,
 ];
 
-export { Acirhia, DungeonTracker, FiresideBOT, WorkTimeManager };
+export { Acirhia, Afflurish, DungeonTracker, FiresideBOT, WorkTimeManager };
 
 export default FullStackProjects;
