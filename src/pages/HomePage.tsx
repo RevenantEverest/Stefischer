@@ -39,7 +39,7 @@ function HomePage() {
                             <AboutMeSummary />
                         </div>
                     </Element>
-                    <div className="my-32">
+                    <div className="mb-64 mt-16">
                         <TitleBlurbs />
                     </div>
                     <div className="mb-32">
