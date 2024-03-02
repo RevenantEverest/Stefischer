@@ -25,8 +25,8 @@ function AboutMeSummary() {
                     <div className="border-b-2 border-secondary w-14 ml-3 md:ml-0" />
                 </div>
             </Flex>
-            <Flex className="px-0 md:px-6 flex-col lg:flex-row">
-                <Box className="w-full lg:w-5/6 text-center lg:text-left pb-16">
+            <Flex className="px-0 md:px-6 flex-col xl:flex-row lg:gap-20 xl:gap-0">
+                <Box className="w-full xl:w-5/6 text-center lg:text-left pb-16">
                     <h1 className="font-bold text-4xl">Stefan Fischer</h1>
                     <h2 className="font-semibold text-secondary text-xl mb-6">Full Stack Developer ~ Graphic Designer ~ VFX Artist</h2>
                     <p className="pb-6">
@@ -62,7 +62,7 @@ function AboutMeSummary() {
                         <SocialIcon gradient brand="Instagram" size="md" />
                     </Flex>
                 </Box>
-                <Box className="flex justify-center w-full lg:w-3/6 lg:justify-end items-center pr-0 lg:pr-16">
+                <Box className="flex justify-center w-full xl:w-3/6 xl:justify-end items-center pr-0 lg:pr-16">
                     <motion.div 
                         className="absolute z-0"
                         animate={{
