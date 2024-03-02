@@ -11,7 +11,7 @@ function ViewProjectButton({ modalComponent }: ViewProjectButtonProps) {
     const [visible, setVisible] = useState(false);
 
     return(
-        <div className="w-full md:w-1/2">
+        <div className="w-full xl:w-1/2">
             <Button color="secondary" onClick={() => setVisible(true)}>
                 <p className="font-semibold">View Project</p>
             </Button>
