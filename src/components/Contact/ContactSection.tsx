@@ -1,5 +1,6 @@
 import type { ContactFormValues, ContactFormHelpers } from '@@components/Forms/ContactForm';
 
+import { useRef, useState, useEffect } from 'react';
 import { Flex, Box } from 'reflexbox';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,9 +12,27 @@ import ContactForm from '@@components/Forms/ContactForm';
 
 import * as services from '@@services';
 
+import { useWindowDimensions } from '@@hooks';
 import { PERSONAL_LINKS } from '@@constants';
 
 function ContactSection() {
+
+    const cardRef = useRef<HTMLDivElement>(null);
+    const windowDimensions = useWindowDimensions();
+    const [cardDimensions, setCardDimensions] = useState({
+        width: 0,
+        height: 0
+    });
+
+    useEffect(() => {
+        if(!cardRef.current) {
+            return;
+        }
+        setCardDimensions({
+            width: cardRef.current.offsetWidth,
+            height: cardRef.current.offsetHeight
+        });
+    }, [windowDimensions]);
 
     const onSubmit = async (values: ContactFormValues, helpers: ContactFormHelpers) => {
         const [res, err] = await services.formCarry.send({
@@ -52,8 +71,8 @@ function ContactSection() {
     };
     
     return(
-        <Flex className="flex-col lg:flex-row gap-10 lg:gap-0">
-            <Box className="w-full lg:w-3/6">
+        <Flex className="flex-col xl:flex-row gap-10 xl:gap-0 flex-wrap justify-center items-center">
+            <Box className="w-full xl:w-3/6">
                 <h1 className="font-bold text-6xl">
                     Let's build something 
                     <span className="text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text">
@@ -82,11 +101,19 @@ function ContactSection() {
                 </div>
                 
             </Box>
-            <Box className="flex w-full lg:w-3/6 justify-center">
-                <Card className="z-10 w-full lg:w-4/6">
-                    <ContactForm onSubmit={onSubmit} />
-                </Card>
-                <div className="top-[50rem] lg:top-80 h-[28rem] w-[20rem] lg:w-[28rem] absolute bg-primary blur-2xl z-0 block duration-75 ease-in-out" />
+            <Box className="flex flex-col w-full lg:w-5/6 xl:w-3/6 items-center justify-center">
+                <div ref={cardRef} className="w-full xl:w-4/6 z-10">
+                    <Card className="w-full">
+                        <ContactForm onSubmit={onSubmit} />
+                    </Card>
+                </div>
+                <div 
+                    className="absolute bg-primary blur-2xl z-0 block duration-75 ease-in-out"
+                    style={{ 
+                        height: `${cardDimensions.height - 20}px`, 
+                        width: `${cardDimensions.width - 40}px` 
+                    }} 
+                />
             </Box>
         </Flex>
     );

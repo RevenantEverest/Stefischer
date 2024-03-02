@@ -1,17 +1,35 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { Flex } from 'reflexbox';
 
-export interface LayoutProps {
+export interface LayoutProps extends React.HTMLProps<HTMLDivElement> {
+    main?: boolean,
     transparent?: boolean
 };
 
-function Layout({ transparent, children }: PropsWithChildren<LayoutProps>) {
+function Layout({ className, main, transparent, children, ...rest }: PropsWithChildren<LayoutProps>) {
+
+    const bgColor = transparent ? "bg-transparent" : "bg-background";
+    const mainStyles = main && "top-[56vh]";
+
     return(
-        <Flex className="py-20 w-full lg:w-5/6">
-            <Flex className={`px-4 md:px-16 w-full justify-center flex-col ${!transparent && "bg-background"}`}>
-                {children}
-            </Flex>
+        <Flex 
+            className={`
+                flex-col
+                w-full
+                relative 
+                px-5 
+                lg:px-52
+                pt-20 
+                pointer-events-auto 
+                items-center
+                justify-center
+                ${mainStyles}
+                ${bgColor} ${className}
+            `} 
+            {...rest}
+        >
+            {children}
         </Flex>
     );
 };

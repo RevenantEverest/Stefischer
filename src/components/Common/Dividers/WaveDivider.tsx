@@ -2,13 +2,13 @@
 function WaveDivider() {
     return(
         <div 
-            className="absolute left-0 top-0 w-full overflow-hidden leading-[0]" 
+            className="w-full overflow-hidden leading-[0] md:-mb-1 pointer-events-none" 
             style={{ 
                 transform: "rotate(180deg)"
             }}
         >
             <svg 
-                className="relative block h-[20vh] right-72 md:right-0 w-[220vw] md:w-full"
+                className="relative block h-[20vh] right-72 md:right-0 w-[220vw] md:w-full pointer-events-none"
                 style={{ 
                     transform: "calc(100% + 1.3px)" 
                 }}

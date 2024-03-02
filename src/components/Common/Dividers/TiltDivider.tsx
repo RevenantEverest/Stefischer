@@ -19,7 +19,7 @@ function TiltDivider({ flip, rotate }: TiltDividerProps) {
 
     return(
         <div 
-            className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]"
+            className="w-full overflow-hidden leading-[0]"
             {...rotateStyles}
         >
             <svg 
