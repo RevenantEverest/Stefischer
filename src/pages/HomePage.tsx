@@ -4,7 +4,7 @@ import { Flex } from 'reflexbox';
 import { Element, scrollSpy } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 
-import { TiltDivider, WaveDivider, BeamMeUp } from '@@components/Common';
+import { Layout, TiltDivider, WaveDivider, BeamMeUp } from '@@components/Common';
 
 import Jumbotron from '@@components/Home/Jumbotron';
 import SkillsAndExperience from '@@components/Home/SkillsAndExperience';
@@ -31,7 +31,7 @@ function HomePage() {
             </Flex>
             <Flex className="flex-col relative top-[70vh] lg:top-[76vh] pointer-events-none">
                 <WaveDivider />
-                <div className="px-5 lg:px-52 pt-20 bg-background pointer-events-auto">
+                <Layout>
                     <Element name={SCROLL_ELEMENTS.HOMEPAGE.about}>
                         <div className="my-32">
                             <AboutMeSummary />
@@ -43,26 +43,26 @@ function HomePage() {
                     <div className="mb-32">
                         <SkillsAndExperience />
                     </div>
-                </div>
+                </Layout>
                 <div className="bg-gradient-to-tr from-primary to-secondary pointer-events-auto">
                     <TiltDivider />
-                    <div className="px-5 lg:px-52 pt-20">
+                    <Layout transparent>
                         <div className="py-32">
                             <FeaturedProjects />
                         </div>
-                    </div>
+                    </Layout>
                     <TiltDivider rotate />
                 </div>
-                <div className="px-5 lg:px-52 py-20 bg-background pointer-events-auto">
-                    <Element name={SCROLL_ELEMENTS.HOMEPAGE.contact}>
-                        <div className="my-32">
+                <Layout>
+                    <Element className="w-full" name={SCROLL_ELEMENTS.HOMEPAGE.contact}>
+                        <div className="my-32 w-full">
                             <ContactSection />
                         </div>
                     </Element>
-                    <div className="flex items-center justify-center">
+                    <div className="pb-20 flex items-center justify-center">
                         <BeamMeUp />
                     </div>
-                </div>
+                </Layout>
             </Flex>
         </React.Fragment>
     );
