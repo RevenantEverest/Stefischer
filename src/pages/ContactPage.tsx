@@ -1,5 +1,4 @@
 import React from 'react';
-import { Flex } from 'reflexbox';
 import { Helmet } from 'react-helmet';
 
 import { PageHeader, Layout, BeamMeUp } from '@@components/Common';
@@ -12,16 +11,14 @@ function ContactPage() {
                 <title>Stefan Fischer - Contact</title>
             </Helmet>
             <PageHeader title="Contact" />
-            <Flex className="relative bg-background w-full justify-center top-[56vh] pt-20">
-                <Layout>
-                    <div className="my-32">
-                        <ContactSection />
-                    </div>
-                    <div>
-                        <BeamMeUp />
-                    </div>
-                </Layout>
-            </Flex>
+            <Layout main>
+                <div className="my-32 w-full">
+                    <ContactSection />
+                </div>
+                <div className="mb-20">
+                    <BeamMeUp />
+                </div>
+            </Layout>
         </React.Fragment>
     );
 };

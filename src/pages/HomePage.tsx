@@ -29,10 +29,8 @@ function HomePage() {
             <Flex className="fixed">
                 <Jumbotron scrollElements={SCROLL_ELEMENTS.HOMEPAGE} />
             </Flex>
-            <Flex className="absolute left-0 right-0 top-[66.2vh] md:top-[74.2vh] lg:top-[66.2vh] justify-center">
+            <Flex className="flex-col relative top-[70vh] lg:top-[76vh] pointer-events-none">
                 <WaveDivider />
-            </Flex> 
-            <Flex className="relative bg-background w-full justify-center top-[86vh] md:top-[94vh] lg:top-[86vh] pt-20">
                 <Layout>
                     <Element name={SCROLL_ELEMENTS.HOMEPAGE.about}>
                         <div className="my-32">
@@ -46,37 +44,26 @@ function HomePage() {
                         <SkillsAndExperience />
                     </div>
                 </Layout>
-            </Flex>
-            <Flex className="relative bg-background w-full justify-center top-[86vh] pt-20 z-10">
-                <Flex className="absolute w-full justify-center top-[28vh] md:top-[24vh]">
+                <div className="bg-gradient-to-tr from-primary to-secondary pointer-events-auto">
                     <TiltDivider />
-                </Flex>
-            </Flex>
-            <Flex className="relative bg-gradient-to-tr from-primary to-secondary w-full justify-center top-[86vh] pt-32 pb-64">
-                <Layout transparent>
-                    <div className="">
-                        <FeaturedProjects />
-                    </div>
-                </Layout>
-            </Flex>
-            <Flex className="relative w-full justify-center top-[62vh] md:top-[60vh] pt-20 z-10">
-                <Flex className="absolute w-full justify-center top-[24vh]">
+                    <Layout transparent>
+                        <div className="py-32">
+                            <FeaturedProjects />
+                        </div>
+                    </Layout>
                     <TiltDivider rotate />
-                </Flex>
-            </Flex>
-            <Flex className="relative bg-background w-full justify-center top-[75vh] py-20">
+                </div>
                 <Layout>
-                    <Element name={SCROLL_ELEMENTS.HOMEPAGE.contact}>
-                        <div className="my-32">
+                    <Element className="w-full" name={SCROLL_ELEMENTS.HOMEPAGE.contact}>
+                        <div className="my-32 w-full">
                             <ContactSection />
                         </div>
                     </Element>
-                    <div className="flex items-center justify-center">
+                    <div className="pb-20 flex items-center justify-center">
                         <BeamMeUp />
                     </div>
                 </Layout>
             </Flex>
-            
         </React.Fragment>
     );
 };

@@ -13,7 +13,7 @@ function BeamMeUp() {
     return(
         <Flex className="w-full items-center justify-center">
             <motion.div
-                className="w-[10rem] flex items-center justify-center hover:cursor-pointer"
+                className="w-[10rem] flex flex-col gap-5 items-center justify-center hover:cursor-pointer"
                 whileHover={{
                     scale: [1, 1.2]
                 }}
@@ -31,6 +31,11 @@ function BeamMeUp() {
                         <GiAstronautHelmet className="text-6xl" />
                     </div>
                 </Tooltip>
+                <span 
+                    className="bg-card px-2 py-1 w-44 text-center rounded-lg font-semibold text-md md:hidden"
+                >
+                    Beam Me Up Scotty!
+                </span>
             </motion.div>
         </Flex>
     );

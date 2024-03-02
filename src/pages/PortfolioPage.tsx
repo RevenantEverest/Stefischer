@@ -1,7 +1,6 @@
 import type { AllProjects } from '@@types/Portfolio';
 
 import React from 'react';
-import { Flex } from 'reflexbox';
 import { Helmet } from 'react-helmet';
 
 import { PageHeader, Layout, BeamMeUp } from '@@components/Common';
@@ -31,16 +30,14 @@ function PortfolioPage() {
                 <title>Stefan Fischer - Portfolio</title>
             </Helmet>
             <PageHeader title="Portfolio" />
-            <Flex className="relative bg-background w-full justify-center top-[56vh] md:top-[80vh] lg:top-[56vh] pt-20 overflow-hidden">
-                <Layout>
+                <Layout main>
                     <div className="pb-32">
                         <PortfolioWrapper projects={projects} />
                     </div>
-                    <div className="pt-32">
+                    <div className="pt-32 pb-20">
                         <BeamMeUp />
                     </div>
                 </Layout>
-            </Flex>
         </React.Fragment>
     );
 };
