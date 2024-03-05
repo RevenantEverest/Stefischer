@@ -1,10 +1,18 @@
+import type { RootState } from '@@store/index';
+
 import { Flex } from 'reflexbox';
 import { Tooltip } from 'flowbite-react';
 import { motion } from 'framer-motion';
 import { animateScroll as scroll } from 'react-scroll';
-import { GiAstronautHelmet } from "react-icons/gi";
+import { GiAstronautHelmet } from 'react-icons/gi';
+import { useSelector } from 'react-redux';
+
+import { colors } from '@@utils';
 
 function BeamMeUp() {
+
+    const currentTheme = useSelector((state: RootState) => state.theme);
+    const secondaryContrast = colors.hexToContrast(currentTheme.colors.secondary, currentTheme.colors.text);
 
     const scrollToTop = () => {
         scroll.scrollToTop();
@@ -25,10 +33,10 @@ function BeamMeUp() {
                 <Tooltip 
                     arrow={false}
                     content="Beam Me Up Scotty!" 
-                    className="bg-card font-semibold"
+                    className="bg-card text-text font-semibold"
                 >
                     <div className="bg-secondary p-8 rounded-full">
-                        <GiAstronautHelmet className="text-6xl" />
+                        <GiAstronautHelmet className={`text-6xl ${secondaryContrast >= 3 ? "text-white" : "text-black"}`} />
                     </div>
                 </Tooltip>
                 <span 
