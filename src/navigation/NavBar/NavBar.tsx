@@ -10,6 +10,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import { _HomeRoutes } from '@@navigation/_Routes';
 import { MobileNav } from '@@navigation/MobileNav';
+import { ThemeChangerContainer } from '@@containers/index';
+
 import GetInTouch from './GetInTouch';
 
 import { IMAGE_RESOURCES } from '@@constants';
@@ -111,7 +113,10 @@ function NavBar({ location }: NavBarProps) {
                             </Flex>
                         </Box>
                         <Box flex="1 1 auto" className="hidden md:flex md:justify-end md:items-center">
-                            <GetInTouch location={location} />
+                            <div className="flex gap-5 items-center justify-center">
+                                <ThemeChangerContainer />
+                                <GetInTouch location={location} />
+                            </div>
                         </Box>
                         <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">
                             <div className="ml-4 mr-4 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
