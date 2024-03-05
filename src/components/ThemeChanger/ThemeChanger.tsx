@@ -29,9 +29,11 @@ function ThemeChanger({ theme, setTheme }: ThemeChangerProps) {
         return Object.keys(allThemes).map((key: string, index: number) => {
             const singleTheme = allThemes[key as ThemeName];
             return(
-                <div className="flex gap-5 bg-card md:bg-transparent rounded-full pr-5 md:pr-0">
+                <div 
+                    key={`theme-${singleTheme.name}-${index}`}
+                    className="flex gap-5 bg-card md:bg-transparent rounded-full pr-5 md:pr-0" 
+                >
                     <ThemeIcon 
-                        key={`theme-${index}`} 
                         theme={singleTheme} 
                         currentTheme={theme}
                         onClick={() => {
