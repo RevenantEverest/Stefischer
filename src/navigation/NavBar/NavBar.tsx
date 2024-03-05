@@ -62,10 +62,6 @@ function NavBar({ theme, location }: NavBarProps) {
         setSolidBackground(isMobileOpen);
     }, [isMobileOpen]);
 
-    useEffect(() => {
-        setSolidBackground(isMobileOpen);
-    }, [isMobileOpen]);
-
     const renderRoutes = () => {
         const Routes = _HomeRoutes.filter((route) => route.displayNav).map((route, index) => {
             const isActive = navigation.isActiveRoute(location.pathname, route);
