@@ -4,6 +4,9 @@ import '../../mocks/intersectionObserver';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+import { Provider } from 'react-redux';
+import { store } from '@@store/index';
+
 import ContactForm from '@@components/Forms/ContactForm';
 
 type InputName = "name" | "email" | "phoneNumber" | "message";
@@ -30,7 +33,11 @@ const FORM_VALUES: Record<"VALID" | "INVALID", FormValues> = {
 
 describe("Contact Form", () => {
     const setup = (): InputElements => {
-        render(<ContactForm onSubmit={() => null} />);
+        render(
+            <Provider store={store}>
+                <ContactForm onSubmit={() => null} />
+            </Provider>
+        );
 
         const nameInput = screen.getByTestId(/contact-form-name-input/i);
         const emailInput = screen.getByTestId(/contact-form-email-input/i);

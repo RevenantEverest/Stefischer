@@ -59,7 +59,7 @@ function DeveloperProjectModal({ project, visible, setVisible }: DeveloperProjec
                 </Box>
                 <Box className="w-full pb-10">
                     <h2 className="font-bold text-lg mb-4 text-muted">Description:</h2>
-                    <p className="font-semibold text-sm">{project.description}</p>
+                    <p className="font-semibold text-sm text-text">{project.description}</p>
                 </Box>
                 <Box className="w-full pb-8">
                     <h2 className="font-bold text-lg mb-4 text-muted">Technologies Used:</h2>

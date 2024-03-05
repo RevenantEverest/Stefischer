@@ -62,8 +62,8 @@ function FeaturedPortfolioCard({ project }: FeaturedPortfolioCardProps) {
                     }}
                 >
                     <Flex className="justify-center items-center h-full flex-col">
-                        <h1 className="text-3xl font-bold">{project.title}</h1>
-                        <p>{project.subtitle}</p>
+                        <h1 className="text-3xl font-bold text-white">{project.title}</h1>
+                        <p className="text-white text-center">{project.subtitle}</p>
                         <Button color="secondary" className="mt-10" size="md">
                             <p className="font-semibold">View Project</p>
                         </Button>

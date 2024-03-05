@@ -29,7 +29,7 @@ function HomePage() {
             <Flex className="fixed">
                 <Jumbotron scrollElements={SCROLL_ELEMENTS.HOMEPAGE} />
             </Flex>
-            <Flex className="flex-col relative top-[70vh] lg:top-[76vh] pointer-events-none">
+            <Flex className="flex-col relative top-[70vh] lg:top-[76vh] pointer-events-none gap-1">
                 <WaveDivider />
                 <Layout>
                     <Element name={SCROLL_ELEMENTS.HOMEPAGE.about}>
