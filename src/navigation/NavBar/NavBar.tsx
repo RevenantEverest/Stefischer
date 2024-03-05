@@ -1,4 +1,5 @@
 import type { Location } from 'react-router-dom';
+import type { Theme } from '@@types/theme';
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -16,29 +17,46 @@ import GetInTouch from './GetInTouch';
 
 import { IMAGE_RESOURCES } from '@@constants';
 import { useScrollPosition } from '@@hooks';
-import { navigation } from '@@utils';
+import { navigation, colors } from '@@utils';
 
 interface NavBarProps {
+    theme: Theme,
     location: Location
 };
 
-function NavBar({ location }: NavBarProps) {
+function NavBar({ theme, location }: NavBarProps) {
+
+    const secondaryContrast = colors.hexToContrast(theme.colors.secondary, theme.colors.text);
 
     const scrollPosition = useScrollPosition();
     const [solidBackground, setSolidBackground] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
     useEffect(() => {
-        const solidPosition = 550;
+        const solidPos = {
+            home: 550,
+            other: 400
+        };
 
-        if(scrollPosition > solidPosition) {
-            setSolidBackground(true);
-        }
+        if(location.pathname === "/") {
+            if(scrollPosition > solidPos.home) {
+                setSolidBackground(true);
+            }
 
-        if(scrollPosition < solidPosition) {
-            setSolidBackground(false);
+            if(scrollPosition < solidPos.home) {
+                setSolidBackground(false);
+            }
         }
-    }, [scrollPosition]);
+        else {
+            if(scrollPosition > solidPos.other) {
+                setSolidBackground(true);
+            }
+
+            if(scrollPosition < solidPos.other) {
+                setSolidBackground(false);
+            }
+        }
+    }, [scrollPosition, location]);
 
     useEffect(() => {
         setSolidBackground(isMobileOpen);
@@ -47,8 +65,9 @@ function NavBar({ location }: NavBarProps) {
     const renderRoutes = () => {
         const Routes = _HomeRoutes.filter((route) => route.displayNav).map((route, index) => {
             const isActive = navigation.isActiveRoute(location.pathname, route);
+            const textColor = secondaryContrast >= 3 ? (!solidBackground ? "text-white" : "text-text") : "text-text";
             return(
-                <Link className={`${isActive && "font-bold"} mx-4`} to={route.path} key={`nav-link-${index}-${route.title}`}>
+                <Link className={`${isActive && "font-bold"} mx-4 ${textColor} duration-300`} to={route.path} key={`nav-link-${index}-${route.title}`}>
                     {route.title}
                 </Link>
             );
@@ -81,7 +100,7 @@ function NavBar({ location }: NavBarProps) {
                         initial={{ skew: -50, x: "120vw" }}
                         animate={{ 
                             skew: 0, 
-                            x: "-20vw", 
+                            x: "-20vw",
                             transition: { duration: .3 } 
                         }}
                         exit={{
@@ -115,7 +134,7 @@ function NavBar({ location }: NavBarProps) {
                         <Box flex="1 1 auto" className="hidden md:flex md:justify-end md:items-center">
                             <div className="flex gap-5 items-center justify-center">
                                 <ThemeChangerContainer />
-                                <GetInTouch location={location} />
+                                <GetInTouch theme={theme} solidBackground={solidBackground} location={location} />
                             </div>
                         </Box>
                         <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">

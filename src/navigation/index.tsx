@@ -47,7 +47,7 @@ function Navigation({ theme, container }: NavigationProps) {
                     }
                 }}
             />
-            <NavBar location={location} />
+            <NavBar theme={theme} location={location} />
             {container}
         </div>
     );
