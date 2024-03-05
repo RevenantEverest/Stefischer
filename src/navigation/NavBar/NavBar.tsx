@@ -139,7 +139,17 @@ function NavBar({ theme, location }: NavBarProps) {
                         </Box>
                         <Box flex="1 1 auto" className="flex items-center justify-end md:hidden">
                             <div className="ml-4 mr-4 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
-                                <FontAwesomeIcon className="text-2xl" icon={faBars} />
+                                <FontAwesomeIcon 
+                                    className={`
+                                        text-2xl
+                                        ${
+                                            solidBackground ? 
+                                            "text-text" :
+                                            (secondaryContrast >= 3 ? "text-white" : "text-text")
+                                        }
+                                    `}
+                                    icon={faBars}
+                                />
                             </div>
                         </Box>
                     </Flex>
