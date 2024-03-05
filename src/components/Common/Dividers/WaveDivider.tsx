@@ -2,7 +2,7 @@
 function WaveDivider() {
     return(
         <div 
-            className="w-full overflow-hidden leading-[0] -mb-1 pointer-events-none" 
+            className="w-full overflow-hidden leading-[0] mb-.5 pointer-events-none relative -bottom-[0.15rem]" 
             style={{ 
                 transform: "rotate(180deg)"
             }}
