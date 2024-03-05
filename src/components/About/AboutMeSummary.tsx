@@ -44,7 +44,7 @@ function AboutMeSummary() {
                     <Flex className="pb-6 justify-center lg:justify-start flex-col items-center md:flex-row gap-5">
                         <ScrollLink {...scrollLinkProps}>
                             <Button color="secondary">
-                                <p className="font-bold">Let's Get Coffee</p>
+                                <p className="font-bold">Let's Connect</p>
                                 <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                             </Button>
                         </ScrollLink>

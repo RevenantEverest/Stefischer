@@ -1,8 +1,12 @@
+import type { MotionProps } from 'framer-motion';
+import type { RootState } from '@@store/index';
+
 import React from 'react';
 import { Spinner } from 'flowbite-react';
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
 
-import { MotionProps } from 'framer-motion';
+import { colors } from '@@utils';
 
 export type ButtonSizes = "xs" | "sm" | "md" | "lg" | "xl";
 export type PropExtenders = React.ButtonHTMLAttributes<HTMLButtonElement> & MotionProps;
@@ -17,15 +21,19 @@ export interface ButtonProps extends PropExtenders {
 
 function Button({ color="primary", size="md", outlined, loading, children, className="", ...rest }: ButtonProps) {
 
+    const currentTheme = useSelector((state: RootState) => state.theme);
+    const primaryContrast = colors.hexToContrast(currentTheme.colors.primary, currentTheme.colors.text);
+    const secondaryContrast = colors.hexToContrast(currentTheme.colors.secondary, currentTheme.colors.text);
+
     const renderSpinner = () => (
         <Spinner size={size} />
     );
 
     const colorStyles = {
-        "primary": outlined ? "border-2 border-primary text-primary" : "bg-primary text-background",
-        "secondary": outlined ? "border-2 border-secondary" : "bg-secondary",
+        "primary": outlined ? "border-2 border-primary text-primary" : `bg-primary ${primaryContrast >= 3 ? "text-white" : "text-black"}`,
+        "secondary": outlined ? "border-2 border-secondary" : `bg-secondary ${secondaryContrast >= 3 ? "text-white" : "text-black"}`,
         "accent": outlined ? "border-2 border-accent text-background" : "bg-accent text-background",
-        "gradient": `bg-gradient-to-tr from-primary to-secondary ${outlined ? "first:text-white" : "hover:shadow-lg hover:shadow-[#00f3c] text-background"}`,
+        "gradient": `bg-gradient-to-tr from-primary to-secondary ${outlined ? "first:text-white" : `hover:shadow-lg hover:shadow-[#00f3c] ${secondaryContrast >= 3 ? "text-white" : "text-black"}`}`,
         "white": outlined ? "border-2 border-white" : "bg-white text-background"
     };
 

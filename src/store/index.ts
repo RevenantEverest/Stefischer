@@ -1,5 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { persistReducer, persistStore } from 'redux-persist';
+import { 
+    persistReducer, 
+    persistStore,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER
+} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import { themeSlice } from './theme';
@@ -20,8 +29,14 @@ export const store = configureStore({
     devTools: process.env.NODE_ENV !== "production",
     middleware: (getDefaultMiddleware) => (
         getDefaultMiddleware({
+            serializableCheck: {
+                /* https://redux-toolkit.js.org/usage/usage-guide#use-with-redux-persist */
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+            },
             thunk: {
-                extraArgument: []
+                extraArgument: {
+                    
+                }
             }
         })
     )

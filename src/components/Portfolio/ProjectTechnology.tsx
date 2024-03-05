@@ -14,7 +14,7 @@ function ProjectTechnology({ technology }: ProjectTechnologiesProps) {
             whileHover={{ y: "-0.8vh" }}
         >
             <Box className="bg-primary py-1 px-3.5 rounded-full">
-                <p className="font-bold text-xs">{technology}</p>
+                <p className="font-bold text-xs text-white">{technology}</p>
             </Box>
         </motion.div>
     );

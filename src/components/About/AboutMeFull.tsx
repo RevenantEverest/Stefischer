@@ -46,7 +46,7 @@ function AboutMeFull() {
                     <Flex className="pb-6 justify-center lg:justify-start gap-5">
                         <Link to="/contact">
                             <Button color="secondary">
-                                <p className="font-bold">Let's Get Coffee</p>
+                                <p className="font-bold">Let's Connect</p>
                                 <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                             </Button>
                         </Link>

@@ -34,8 +34,8 @@ function FeaturedProjects() {
     return(
         <Flex className="flex-col w-full items-center">
             <Box className="flex flex-col justify-center items-center pb-20 w-full">
-                <h1 className="text-6xl font-semibold text-center">Featured Projects</h1>
-                <p className="w-full md:w-3/6 mt-6 font-semibold text-center">
+                <h1 className="text-6xl font-semibold text-center text-white">Featured Projects</h1>
+                <p className="w-full md:w-3/6 mt-6 font-semibold text-center text-white">
                     Explore my featured projects, merging full-stack development, graphic design, and visual effects into 
                     a dynamic portfolio that reflects my diverse skill set.
                 </p>

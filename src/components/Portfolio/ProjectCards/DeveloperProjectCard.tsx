@@ -54,7 +54,7 @@ function DeveloperProjectCard({ project }: DeveloperProjectCardProps) {
                         </Box>
                         <Box className="w-full lg:w-4/6 flex flex-col">
                             <div className="flex items-center justify-center lg:justify-start">
-                                <h1 className="text-4xl font-bold mb-5 text-text mr-4">
+                                <h1 className="text-4xl font-bold mb-5 text-text mr-4 text-center">
                                     {project.title}
                                 </h1>
                                 <ProjectMediaBadge media={project.images} />

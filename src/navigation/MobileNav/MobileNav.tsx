@@ -1,9 +1,11 @@
-import React, { PropsWithChildren } from 'react';
-import { motion } from 'framer-motion';
-
 import type { Location } from 'react-router-dom';
 import type { Route } from '@@types/routes';
 
+import React, { PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
+import { Flex } from 'reflexbox';
+
+import { ThemeChangerContainer } from '@@containers/index';
 import MobileNavRoute from './MobileNavRoute';
 
 export interface MobileNavProps {
@@ -42,8 +44,12 @@ function MobileNav({ location, routes, isOpen, setIsOpen }: PropsWithChildren<Mo
     };
 
     return(
-        <motion.div key="mobile-nav" className="z-10 absolute bg-neutral-800 w-screen h-screen" initial={initial} animate={animate} exit={exit} transition={transition}>
+        <motion.div key="mobile-nav" className="z-10 absolute bg-background w-screen h-screen" initial={initial} animate={animate} exit={exit} transition={transition}>
             {renderRoutes()}
+            <Flex className="flex-col gap-6 w-3/6 pl-5 pt-5">
+                <p className="font-semibold">Themes:</p>
+                <ThemeChangerContainer />
+            </Flex>
         </motion.div>
     );
 };

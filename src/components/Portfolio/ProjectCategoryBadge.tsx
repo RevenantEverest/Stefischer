@@ -1,6 +1,10 @@
 import type { AllProjects, ProjectCategory } from '@@types/Portfolio';
+import type { RootState } from '@@store/index';
 
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
+
+import { colors } from '@@utils';
 
 export interface ProjectCategoryBadgeProps {
     projects: AllProjects[],
@@ -10,6 +14,9 @@ export interface ProjectCategoryBadgeProps {
 };
 
 function ProjectCategoryBadge({ projects, category, active, setCategoryFilter }: ProjectCategoryBadgeProps) {
+
+    const currentTheme = useSelector((state: RootState) => state.theme);
+    const secondaryContrast = colors.hexToContrast(currentTheme.colors.secondary, currentTheme.colors.text);
 
     const projectAmount: number = projects.filter((project) => project.category === category).length;
     const activeStyles = `
@@ -26,6 +33,7 @@ function ProjectCategoryBadge({ projects, category, active, setCategoryFilter }:
             <div
                 className={`
                     flex bg-secondary px-5 py-1 rounded-full
+                    ${secondaryContrast >= 3 ? "text-white" : (active ? "text-white": "text-black")}
                     ${active && activeStyles}
                 `}
             >

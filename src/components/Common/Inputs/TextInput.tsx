@@ -1,7 +1,12 @@
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import type { RootState } from '@@store/index';
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { useSelector } from 'react-redux';
+
+import { colors } from '@@utils';
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
     type: "text" | "email" | "password" | "number" | "url" | "tel",
@@ -12,6 +17,9 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
 };
 
 function TextInput({ id="", className="", type, label, icon, iconRight, iconClassName="", errorMessage, ...rest }: TextInputProps) {
+
+    const currentTheme = useSelector((state: RootState) => state.theme);
+    const colorContrast = colors.hexToContrast(currentTheme.colors.cardLight, "#ffffff");
 
     const baseInputClassName = `
         block w-full border 
@@ -35,6 +43,7 @@ function TextInput({ id="", className="", type, label, icon, iconRight, iconClas
     const renderIcon = (faIcon: IconProp) => {
         const iconContainerClassName = `
             pointer-events-none absolute flex items-center p-3
+            ${colorContrast >= 3 ? "text-white" : "text-primary"}
             ${iconRight ? "inset-y-0 right-0 pr-3" : "inset-y-0 left-0 pl-3"}
         `;
 

@@ -28,8 +28,9 @@ export type MappedThemeKeys = (
 ); 
 
 export type MappedTheme = Record<MappedThemeKeys, string>;
+export type ThemeName = string;
 
 export interface Theme {
-    name: string,
+    name: ThemeName,
     colors: ThemeColors
 };

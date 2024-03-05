@@ -41,7 +41,7 @@ function Modal({ motionKey, visible, setVisible, children }: React.PropsWithChil
                                     <div className="absolute top-0 right-0">
                                         <Flex className="items-end justify-end">
                                             <FaTimes 
-                                                className="hover:cursor-pointer" 
+                                                className="hover:cursor-pointer text-text" 
                                                 onClick={() => setVisible(false)} 
                                             />
                                         </Flex>
