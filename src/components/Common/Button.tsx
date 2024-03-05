@@ -49,7 +49,6 @@ function Button({ color="primary", size="md", outlined, loading, children, class
         ${colorStyles[color]}
         rounded p-0.5 items-center justify-center 
         border-0 flex h-min text-center
-        duration-300
         ${className}
     `;
 
