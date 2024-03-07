@@ -21,3 +21,12 @@ A portfolio website for [me](https://github.com/RevenantEverest)
 - Vite / React
 - Framer Motion
 - Jest
+
+### Environment Variables
+
+```
+REACT_APP_PUBLIC_POSTHOG_KEY=[ask]
+REACT_APP_PUBLIC_POSTHOG_HOST=[ask]
+SUPABASE_PROJECT_ID=[ask]
+SUPABASE_KEY=[ask]
+```
