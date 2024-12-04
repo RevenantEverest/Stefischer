@@ -1,7 +1,7 @@
 import type { AllProjects, ProjectCategory } from '@@types/Portfolio';
 import type { RootState } from '@@store/index';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useSelector } from 'react-redux';
 
 import { colors } from '@@utils';

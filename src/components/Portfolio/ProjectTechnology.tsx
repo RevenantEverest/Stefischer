@@ -1,5 +1,5 @@
 import { Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export interface ProjectTechnologiesProps {
     technology: string

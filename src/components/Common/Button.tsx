@@ -1,9 +1,9 @@
-import type { MotionProps } from 'framer-motion';
+import type { MotionProps } from 'motion/react';
 import type { RootState } from '@@store/index';
 
 import React from 'react';
 import { Spinner } from 'flowbite-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useSelector } from 'react-redux';
 
 import { colors } from '@@utils';

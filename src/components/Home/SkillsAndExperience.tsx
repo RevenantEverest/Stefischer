@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons/lib';
 
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { 
     SiBun, 
     SiTypescript, 

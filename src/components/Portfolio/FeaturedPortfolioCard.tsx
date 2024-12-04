@@ -2,7 +2,7 @@ import type { Project, DeveloperProject, MotionGraphicsProject, AllProjects } fr
 
 import React, { useState } from 'react';
 import { Flex } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Button } from '@@components/Common';
 
 import ProjectModal from './ProjectCards/Modals/ProjectModal';

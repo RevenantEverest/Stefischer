@@ -5,7 +5,7 @@ import type {
     MotionGraphicsProject, 
 } from '@@types/Portfolio';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import {
     ProjectCard,

@@ -2,7 +2,7 @@ import type { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 import { Flex } from 'reflexbox';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 

@@ -2,7 +2,7 @@ import type { DeveloperProject } from '@@types/Portfolio';
 
 import React, { useState } from 'react';
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { FaGithub } from 'react-icons/fa';
 import { BsGlobe2 } from 'react-icons/bs';
 import { FaImage } from 'react-icons/fa';
