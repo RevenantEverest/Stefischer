@@ -42,8 +42,9 @@ function FeaturedPortfolioCard({ project }: FeaturedPortfolioCardProps) {
 
     return(
         <React.Fragment>
-            <motion.div 
-                className="flex h-60 w-80 md:h-64 md:w-96 overflow-hidden" 
+            <motion.div
+                key={`${project.title}-${project.category}`}
+                className="flex relative h-60 w-80 md:h-64 md:w-96 overflow-hidden" 
                 whileHover={{
                     y: "-.5vh"
                 }}
@@ -55,7 +56,8 @@ function FeaturedPortfolioCard({ project }: FeaturedPortfolioCardProps) {
                     alt={project.title}
                 />
                 <motion.div 
-                    className="absolute bg-black/70 w-full h-full top-0 bottom-0 left-0 right-0 rounded-3xl"
+                    key={`${project.title}-${project.category}-content`}
+                    className="absolute w-full h-full bg-black/70 top-0 bottom-0 left-0 right-0 rounded-3xl"
                     initial={{ opacity: 0 }}
                     whileHover={{
                         opacity: 1
