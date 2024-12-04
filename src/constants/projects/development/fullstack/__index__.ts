@@ -4,6 +4,8 @@ import Acirhia from './acirhia';
 import Afflurish from './afflurish';
 import DungeonTracker from './dungeonTracker';
 import FiresideBOT from './firesidebot';
+import LinearDiscord from './linearDiscord';
+import OpenAnimeAPI from './openAnimeAPI';
 import WorkTimeManager from './workTimeManager';
 
 /*
@@ -12,11 +14,13 @@ import WorkTimeManager from './workTimeManager';
 const FullStackProjects: DeveloperProject[] = [
     FiresideBOT,
     Afflurish,
+    LinearDiscord,
+    OpenAnimeAPI,
     DungeonTracker,
     WorkTimeManager,
     Acirhia,
 ];
 
-export { Acirhia, Afflurish, DungeonTracker, FiresideBOT, WorkTimeManager };
+export { Acirhia, Afflurish, DungeonTracker, FiresideBOT, LinearDiscord, OpenAnimeAPI, WorkTimeManager };
 
 export default FullStackProjects;
