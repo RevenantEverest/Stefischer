@@ -75,7 +75,7 @@ function ContactSection() {
             <Box className="w-full xl:w-3/6">
                 <h1 className="font-bold text-6xl">
                     Let's build something 
-                    <span className="text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text">
+                    <span className="text-transparent bg-linear-to-br/srgb from-primary to-secondary bg-clip-text">
                         {" "}together
                     </span>
                 </h1>

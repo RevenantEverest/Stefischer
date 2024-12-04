@@ -41,7 +41,7 @@ function SocialIcon({ brand, size, gradient, containerClassName, iconClassName }
         "lg": "p-7 text-3xl"
     };
 
-    const backgroundClassName = gradient ? "bg-gradient-to-bl from-primary to-secondary text-white" : "bg-secondary text-card"
+    const backgroundClassName = gradient ? "bg-linear-to-bl/srgb from-primary to-secondary text-white" : "bg-secondary text-card"
 
     return(
         <Link to={brandLinks[brand]} target="_blank" rel="noopener noreferrer">

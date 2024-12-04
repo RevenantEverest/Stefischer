@@ -44,7 +44,7 @@ function HomePage() {
                         <SkillsAndExperience />
                     </div>
                 </Layout>
-                <div className="bg-gradient-to-tr from-primary to-secondary pointer-events-auto">
+                <div className="bg-linear-to-tr/srgb from-primary to-secondary pointer-events-auto">
                     <TiltDivider />
                     <Layout transparent>
                         <div className="py-32">

@@ -73,7 +73,7 @@ function AboutMeSummary() {
                             repeat: Infinity
                         }}
                     >
-                        <div className="h-64 w-64 md:h-72 md:w-72 bg-gradient-to-bl from-primary to-secondary rounded-full relative -top-8 -right-8" />
+                        <div className="h-64 w-64 md:h-72 md:w-72 bg-linear-to-bl/srgb from-primary to-secondary rounded-full relative -top-8 -right-8" />
                     </motion.div>
                     <motion.div 
                         className="z-10 h-72 w-72"

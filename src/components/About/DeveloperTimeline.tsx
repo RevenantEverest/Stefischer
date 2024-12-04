@@ -180,7 +180,7 @@ function DeveloperTimeline() {
     return(
         <Flex className="flex-col items-center justify-center gap-16">
             <Box className="flex flex-col items-center justify-center">
-                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
+                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-br/srgb from-primary to-secondary">
                     Developer Timeline
                 </h1>
                 <p className="font-semibold text-center mt-6 w-full md:w-3/6">

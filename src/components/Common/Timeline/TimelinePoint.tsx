@@ -28,7 +28,7 @@ function TimelinePoint({ icon, orientation, date }: TimelinePointProps) {
                 </div>
             </Box>
             <Box className="flex h-12 w-12 bg-card-light rounded-full items-center justify-center">
-                <Box className="flex h-8 w-8 bg-gradient-to-tr from-primary to-secondary rounded-full items-center justify-center">
+                <Box className="flex h-8 w-8 bg-linear-to-tr/srgb from-primary to-secondary rounded-full items-center justify-center">
                     <IconComponent className="text-sm text-white" />
                 </Box>
             </Box>

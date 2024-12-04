@@ -20,7 +20,7 @@ function ProjectCategoryBadge({ projects, category, active, setCategoryFilter }:
 
     const projectAmount: number = projects.filter((project) => project.category === category).length;
     const activeStyles = `
-        bg-gradient-to-tr from-primary to-secondary
+        bg-linear-to-tr/srgb from-primary to-secondary
     `;
 
     return(

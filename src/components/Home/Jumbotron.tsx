@@ -24,7 +24,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
     const buttonSize: "lg" | "md" = dimensions.width > BREAKPOINTS.LG ? "lg" : "md";
 
     return(
-        <Flex className={`py-20 lg:py-32 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
+        <Flex className={`py-20 lg:py-32 bg-linear-to-tr/srgb from-primary to-secondary justify-center items-center`}>
             <Flex className="h-[75vh] md:h-[69vh] lg:h-[70vh] w-[100vw] md:px-20 xl:px-40">
                 <Box className="flex items-center text-center md:text-left xl:w-9/12">
                     <motion.div
