@@ -90,7 +90,7 @@ function SkillsAndExperience() {
                 <h1 className="text-6xl font-semibold text-center text-transparent bg-linear-to-br/srgb from-primary to-secondary bg-clip-text">Skills & Experience</h1>
                 <p className="w-5/6 md:w-4/6 mt-6 font-semibold text-md">A good developer knows the right tool for the job.</p>
                 <p className="w-5/6 md:w-4/6 mt-2 font-semibold text-md">
-                    Whether it's front-end development, back-end architecture, or database management, I possess a 
+                    Whether it&apos;s front-end development, back-end architecture, or database management, I possess a 
                     versatile skill set to tackle diverse project requirements effectively. 
                     <br />
                     <br />

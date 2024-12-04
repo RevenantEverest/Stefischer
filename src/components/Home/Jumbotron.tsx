@@ -39,7 +39,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                             <br />
                             <div className="text-lg mt-4 lg:mt-8 w-11/12 text-center md:text-center xl:text-left md:w-10/12 text-white">
                                 <p>
-                                    I'm a digerati with a background in design, utilizing the modern web stack to bring new and innovative designs to the web.
+                                    I&apos;m a digerati with a background in design, utilizing the modern web stack to bring new and innovative designs to the web.
                                 </p>
                             </div>
                             <div className="flex gap-5 text-lg mt-5 lg:mt-14 w-full md:w-3/4 justify-center xl:justify-start">

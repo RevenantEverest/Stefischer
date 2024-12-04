@@ -30,7 +30,7 @@ function AboutMeSummary() {
                     <h1 className="font-bold text-4xl">Stefan Fischer</h1>
                     <h2 className="font-semibold text-secondary text-xl mb-6">Full Stack Developer ~ Graphic Designer ~ VFX Artist</h2>
                     <p className="pb-6">
-                        Hey, I'm Stefan, a web developer who kicked off this journey in 2018 at General Assembly, diving 
+                        Hey, I&apos;m Stefan, a web developer who kicked off this journey in 2018 at General Assembly, diving 
                         into JavaScript and mastering the art of building full-stack applications. Following that, I ventured 
                         into a course exploring Java, Spring Boot, and Microservices, sponsored by a Fortune 500 company for 
                         a real-world perspective. 
@@ -38,13 +38,13 @@ function AboutMeSummary() {
                         <br />
                         Post-graduation, I focused on building my portfolio and took on exciting 
                         projects, like a Discord bot that gained 200,000 users, showcasing my commitment to user-friendly 
-                        applications. Beyond coding, you'll find me exploring virtual worlds in video games, crafting music, 
+                        applications. Beyond coding, you&apos;ll find me exploring virtual worlds in video games, crafting music, 
                         or geeking out over building computers - all part of the creative blend I bring to web development.
                     </p>
                     <Flex className="pb-6 justify-center lg:justify-start flex-col items-center md:flex-row gap-5">
                         <ScrollLink {...scrollLinkProps}>
                             <Button color="secondary">
-                                <p className="font-bold">Let's Connect</p>
+                                <p className="font-bold">Let&apos;s Connect</p>
                                 <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                             </Button>
                         </ScrollLink>

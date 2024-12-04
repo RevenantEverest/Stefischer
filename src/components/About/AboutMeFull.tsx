@@ -22,7 +22,7 @@ function AboutMeFull() {
                     <h1 className="font-bold text-4xl">Stefan Fischer</h1>
                     <h2 className="font-semibold text-secondary text-xl mb-6">Full Stack Developer ~ Graphic Designer ~ VFX Artist</h2>
                     <p className="pb-6">
-                        Hey there! I'm Stefan, and I jumped into the world of web development back in 2018. My coding adventure 
+                        Hey there! I&apos;m Stefan, and I jumped into the world of web development back in 2018. My coding adventure 
                         kicked off at General Assembly, where I got hands-on with JavaScript and learned the ins and outs of 
                         building full-stack applications using Node.js, Express.js, React.js, and PostgreSQL.
                         <br />
@@ -38,15 +38,15 @@ function AboutMeFull() {
                         functional but also user-friendly.
                         <br />
                         <br />
-                        Beyond the code, I've got a few other things keeping me busy. Whether I'm diving into virtual worlds 
+                        Beyond the code, I&apos;ve got a few other things keeping me busy. Whether I&apos;m diving into virtual worlds 
                         through video games, finding my groove with music composition, or geeking out over building computers, 
-                        there's always something creative brewing. Join me on this journey where every line of code is a story, 
+                        there&apos;s always something creative brewing. Join me on this journey where every line of code is a story, 
                         and every project is a piece of the passion I bring to web development.
                     </p>
                     <Flex className="pb-6 justify-center lg:justify-start gap-5">
                         <Link to="/contact">
                             <Button color="secondary">
-                                <p className="font-bold">Let's Connect</p>
+                                <p className="font-bold">Let&apos;s Connect</p>
                                 <FontAwesomeIcon className="ml-2 mt-1" icon={faCoffee} />
                             </Button>
                         </Link>

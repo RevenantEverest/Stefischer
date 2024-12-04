@@ -74,13 +74,13 @@ function ContactSection() {
         <Flex className="flex-col xl:flex-row gap-10 xl:gap-0 flex-wrap justify-center items-center">
             <Box className="w-full xl:w-3/6">
                 <h1 className="font-bold text-6xl">
-                    Let's build something 
+                    Let&apos;s build something 
                     <span className="text-transparent bg-linear-to-br/srgb from-primary to-secondary bg-clip-text">
                         {" "}together
                     </span>
                 </h1>
                 <p className="mt-5 text-muted font-semibold w-full lg:w-4/6">
-                    Ready to turn your vision into reality? Drop me a message, and let's connect to start building together.
+                    Ready to turn your vision into reality? Drop me a message, and let&apos;s connect to start building together.
                 </p>
                 <div className="my-8">
                     <Flex>
