@@ -2,7 +2,7 @@ import type { MotionGraphicsProject } from '@@types/Portfolio';
 
 import React, { useState } from 'react';
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Card, Button } from '@@components/Common';
 import MotionGraphicsProjectModal from './Modals/MotionGraphicsProjectModal';
 

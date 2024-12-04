@@ -2,7 +2,7 @@ import type { Location } from 'react-router-dom';
 import type { Route } from '@@types/routes';
 
 import React, { PropsWithChildren } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Flex } from 'reflexbox';
 
 import { ThemeChangerContainer } from '@@containers/index';

@@ -2,7 +2,7 @@ import type { ProjectCategory, AllProjects } from '@@types/Portfolio';
 
 import { useState } from 'react';
 import { Flex, Box } from 'reflexbox';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { TextInput } from '@@components/Common';
