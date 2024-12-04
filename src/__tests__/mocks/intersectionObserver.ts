@@ -1,6 +1,6 @@
 /*
-    Intersection Observer mock from framer-motion tests
-    https://github.com/framer/motion/blob/main/packages/framer-motion/src/utils/__tests__/mock-intersection-observer.ts
+    Intersection Observer mock from motion/react tests
+    https://github.com/framer/motion/blob/main/packages/motion/react/src/utils/__tests__/mock-intersection-observer.ts
 */
 
 export type MockIntersectionObserverEntry = {

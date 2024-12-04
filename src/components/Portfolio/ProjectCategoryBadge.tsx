@@ -1,7 +1,7 @@
 import type { AllProjects, ProjectCategory } from '@@types/Portfolio';
 import type { RootState } from '@@store/index';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useSelector } from 'react-redux';
 
 import { colors } from '@@utils';
@@ -20,7 +20,7 @@ function ProjectCategoryBadge({ projects, category, active, setCategoryFilter }:
 
     const projectAmount: number = projects.filter((project) => project.category === category).length;
     const activeStyles = `
-        bg-gradient-to-tr from-primary to-secondary
+        bg-linear-to-tr/srgb from-primary to-secondary
     `;
 
     return(

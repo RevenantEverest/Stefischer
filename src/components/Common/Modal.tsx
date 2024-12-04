@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { Flex, Box } from 'reflexbox';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { FaTimes } from 'react-icons/fa';
 
 import { Card } from '@@components/Common';

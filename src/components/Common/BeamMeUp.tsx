@@ -2,7 +2,7 @@ import type { RootState } from '@@store/index';
 
 import { Flex } from 'reflexbox';
 import { Tooltip } from 'flowbite-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { animateScroll as scroll } from 'react-scroll';
 import { GiAstronautHelmet } from 'react-icons/gi';
 import { useSelector } from 'react-redux';

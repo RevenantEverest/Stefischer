@@ -1,9 +1,9 @@
-import type { MotionProps } from 'framer-motion';
+import type { MotionProps } from 'motion/react';
 import type { RootState } from '@@store/index';
 
 import React from 'react';
 import { Spinner } from 'flowbite-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useSelector } from 'react-redux';
 
 import { colors } from '@@utils';
@@ -33,7 +33,7 @@ function Button({ color="primary", size="md", outlined, loading, children, class
         "primary": outlined ? "border-2 border-primary text-primary" : `bg-primary ${primaryContrast >= 3 ? "text-white" : "text-black"}`,
         "secondary": outlined ? "border-2 border-secondary" : `bg-secondary ${secondaryContrast >= 3 ? "text-white" : "text-black"}`,
         "accent": outlined ? "border-2 border-accent text-background" : "bg-accent text-background",
-        "gradient": `bg-gradient-to-tr from-primary to-secondary ${outlined ? "first:text-white" : `hover:shadow-lg hover:shadow-[#00f3c] ${secondaryContrast >= 3 ? "text-white" : "text-black"}`}`,
+        "gradient": `bg-linear-to-tr/srgb from-primary to-secondary ${outlined ? "first:text-white" : `hover:shadow-lg hover:shadow-[#00f3c] ${secondaryContrast >= 3 ? "text-white" : "text-black"}`}`,
         "white": outlined ? "border-2 border-white" : "bg-white text-background"
     };
 

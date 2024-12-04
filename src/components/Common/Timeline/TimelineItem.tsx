@@ -3,7 +3,7 @@ import type { TimelineDataPoint, TimelineOrientation } from '@@types/Timeline';
 
 import React from 'react';
 import { Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import TimelinePoint from './TimelinePoint';
 import TimelineContent from './TimelineContent';

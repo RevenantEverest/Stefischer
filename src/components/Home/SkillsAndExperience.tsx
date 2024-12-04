@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons/lib';
 
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { 
     SiBun, 
     SiTypescript, 
@@ -87,10 +87,10 @@ function SkillsAndExperience() {
         <Flex className="justify-center text-center flex-col">
             <Box className="flex flex-col justify-center items-center pb-20">
                 <p className="uppercase text-muted mb-2 text-lg">The right tool for the job</p>
-                <h1 className="text-6xl font-semibold text-center text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text">Skills & Experience</h1>
+                <h1 className="text-6xl font-semibold text-center text-transparent bg-linear-to-br/srgb from-primary to-secondary bg-clip-text">Skills & Experience</h1>
                 <p className="w-5/6 md:w-4/6 mt-6 font-semibold text-md">A good developer knows the right tool for the job.</p>
                 <p className="w-5/6 md:w-4/6 mt-2 font-semibold text-md">
-                    Whether it's front-end development, back-end architecture, or database management, I possess a 
+                    Whether it&apos;s front-end development, back-end architecture, or database management, I possess a 
                     versatile skill set to tackle diverse project requirements effectively. 
                     <br />
                     <br />

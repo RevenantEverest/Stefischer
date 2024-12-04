@@ -1,5 +1,5 @@
 import { Flex } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 import { FaCode, FaPhotoFilm } from 'react-icons/fa6';

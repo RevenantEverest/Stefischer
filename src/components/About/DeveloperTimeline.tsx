@@ -180,11 +180,11 @@ function DeveloperTimeline() {
     return(
         <Flex className="flex-col items-center justify-center gap-16">
             <Box className="flex flex-col items-center justify-center">
-                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
+                <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-br/srgb from-primary to-secondary">
                     Developer Timeline
                 </h1>
                 <p className="font-semibold text-center mt-6 w-full md:w-3/6">
-                    Here, you'll find a timeline highlighting the courses I've completed, projects I've worked on, and key 
+                    Here, you&apos;ll find a timeline highlighting the courses I&apos;ve completed, projects I&apos;ve worked on, and key 
                     career milestones. Dive into the moments that have influenced my skills and professional path.
                 </p>
             </Box>

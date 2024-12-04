@@ -2,7 +2,7 @@ import type { HomePageScrollElements } from '@@types/ScrollElements';
 
 import Lottie from 'lottie-react';
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -24,7 +24,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
     const buttonSize: "lg" | "md" = dimensions.width > BREAKPOINTS.LG ? "lg" : "md";
 
     return(
-        <Flex className={`py-20 lg:py-32 bg-gradient-to-tr from-primary to-secondary justify-center items-center`}>
+        <Flex className={`py-20 lg:py-32 bg-linear-to-tr/srgb from-primary to-secondary justify-center items-center`}>
             <Flex className="h-[75vh] md:h-[69vh] lg:h-[70vh] w-[100vw] md:px-20 xl:px-40">
                 <Box className="flex items-center text-center md:text-left xl:w-9/12">
                     <motion.div
@@ -39,7 +39,7 @@ function Jumbotron({ scrollElements }: JumbotronProps) {
                             <br />
                             <div className="text-lg mt-4 lg:mt-8 w-11/12 text-center md:text-center xl:text-left md:w-10/12 text-white">
                                 <p>
-                                    I'm a digerati with a background in design, utilizing the modern web stack to bring new and innovative designs to the web.
+                                    I&apos;m a digerati with a background in design, utilizing the modern web stack to bring new and innovative designs to the web.
                                 </p>
                             </div>
                             <div className="flex gap-5 text-lg mt-5 lg:mt-14 w-full md:w-3/4 justify-center xl:justify-start">

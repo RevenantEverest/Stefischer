@@ -2,7 +2,7 @@ import type { Project } from '@@types/Portfolio';
 
 import React, { useState } from 'react';
 import { Flex, Box } from 'reflexbox';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import { Card } from '@@components/Common';
 import ProjectModal from './Modals/ProjectModal';
